@@ -1,0 +1,150 @@
+spriteTypes = {
+   ##   kraken mod
+   spriteType = {
+	  name = "GFX_firstpart"
+	  texturefile = "gfx\\interface\\inventory\\artifacts\\firstpart.dds"
+   }
+   spriteType = {
+	  name = "GFX_firstpart_small"
+	  texturefile = "gfx\\interface\\inventory\\artifacts\\firstpart_small.dds"
+   }
+
+   spriteType = {
+	  name = "GFX_secondpart"
+	  texturefile = "gfx\\interface\\inventory\\artifacts\\secondpart.dds"
+   }
+   spriteType = {
+	  name = "GFX_secondpart_small"
+	  texturefile = "gfx\\interface\\inventory\\artifacts\\secondpart_small.dds"
+   }
+
+   spriteType = {
+	  name = "GFX_vs_deeper"
+	  texturefile = "gfx\\interface\\inventory\\artifacts\\vs_deeper.dds"
+   }
+   spriteType = {
+	  name = "GFX_vs_deeper_small"
+	  texturefile = "gfx\\interface\\inventory\\artifacts\\vs_deeper_small.dds"
+   }
+
+   spriteType = {
+	  name = "GFX_vs_krakendead"
+	  texturefile = "gfx\\interface\\inventory\\artifacts\\vs_krakendead.tga"
+   }
+   spriteType = {
+	  name = "GFX_vs_krakendead_small"
+	  texturefile = "gfx\\interface\\inventory\\artifacts\\vs_krakendead_small.dds"
+   }    
+
+   spriteType = {
+	  name = "GFX_evt_krakendeadhunt"
+	  texturefile = "gfx\\event_pictures\\krakendeadhunt.dds"
+   }
+
+   spriteType = {
+	  name = "GFX_evt_firsthuntkraken"
+	  texturefile = "gfx\\event_pictures\\firsthuntkraken.dds"
+   }
+   
+   spriteType = {
+	  name = "GFX_evt_sharkuw"
+	  texturefile = "gfx\\event_pictures\\sharkuw.dds"
+   }
+   spriteType = {
+	  name = "GFX_evt_beachskagos"
+	  texturefile = "gfx\\event_pictures\\beachskagos.tga"
+   }
+   spriteType = {
+	  name = "GFX_evt_wtfhunt"
+	  texturefile = "gfx\\event_pictures\\wtfhunt.tga"
+   }
+   spriteType = {
+	  name = "GFX_evt_sharkracesavehunt"
+	  texturefile = "gfx\\event_pictures\\sharkracesavehunt.dds"
+   }
+
+   spriteType = {
+	  name = "GFX_evt_skagos"
+	  texturefile = "gfx\\event_pictures\\skagos.tga"
+   }
+
+   spriteType = {
+	  name = "GFX_evt_southhuntkraken"
+	  texturefile = "gfx\\event_pictures\\southhuntkraken.dds"
+   }
+   spriteType = {
+	  name = "GFX_evt_gohomehunt"
+	  texturefile = "gfx\\event_pictures\\gohomehunt.dds"
+   }
+
+   spriteType = {
+	  name = "GFX_evt_beach"
+	  texturefile = "gfx\\event_pictures\\beach.dds"
+   }
+   spriteType = {
+	  name = "GFX_evt_jumpwater"
+	  texturefile = "gfx\\event_pictures\\jumpwater.dds"
+   }
+   spriteType = {
+	  name = "GFX_evt_krakendead"
+	  texturefile = "gfx\\event_pictures\\krakendead.dds"
+   }
+
+   spriteType = {
+	  name = "GFX_evt_krakeneye"
+	  texturefile = "gfx\\event_pictures\\krakeneye.dds"
+   }
+
+   spriteType = {
+	  name = "GFX_evt_lookingforkraken"
+	  texturefile = "gfx\\event_pictures\\lookingforkraken.dds"
+   }
+   spriteType = {
+	  name = "GFX_evt_water"
+	  texturefile = "gfx\\event_pictures\\water.dds"
+   }
+   spriteType = {
+	  name = "GFX_evt_handsand"
+	  texturefile = "gfx\\event_pictures\\handsand.dds"
+   }
+   spriteType = {
+	  name = "GFX_evt_dothraki"
+	  texturefile = "gfx\\event_pictures\\dothraki.tga"
+   }
+##   spriteType = {
+##	  name = "GFX_evt_"
+##	  texturefile = "gfx\\event_pictures\\.tga"
+##  }
+   spriteType = {
+	  name = "GFX_evt_earvanille"
+	  texturefile = "gfx\\event_pictures\\earvanille.tga"
+   }
+   spriteType = {
+	  name = "GFX_evt_audiencevanille"
+	  texturefile = "gfx\\event_pictures\\audiencevanille.tga"
+   }
+   spriteType = {
+	  name = "GFX_evt_nightvanille"
+	  texturefile = "gfx\\event_pictures\\nightvanille.tga"
+   }
+   spriteType = {
+	  name = "GFX_evt_feast"
+	  texturefile = "gfx\\event_pictures\\feast.tga"
+   }
+   spriteType = {
+	  name = "GFX_evt_slave"
+	  texturefile = "gfx\\event_pictures\\slave.tga"
+   }
+   spriteType = {
+	  name = "GFX_evt_ladywave"
+	  texturefile = "gfx\\event_pictures\\wavylady.tga"
+   }
+   spriteType = {
+	  name = "GFX_evt_blacksmith"
+	  texturefile = "gfx\\event_pictures\\blacksmith.dds"
+   }
+   
+   
+} ## important
+
+

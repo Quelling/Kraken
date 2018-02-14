@@ -1,0 +1,12 @@
+lookingforkraken = {
+   pilgrimage = yes
+   same_religion_opinion = 5
+   customizer = no
+   random = no
+}
+
+krakenseeker = {
+   general_opinion = 10
+   customizer = yes
+   random = no
+}

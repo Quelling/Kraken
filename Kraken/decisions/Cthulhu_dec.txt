@@ -1,0 +1,215 @@
+decisions = { ## main
+
+   meereen = {
+	  is_high_prio = yes
+	  potential = {
+		 has_dynasty_flag = ladywavequest
+		 NOT = {
+			has_dynasty_flag = ladywavequestdone
+			has_character_flag = krakenfeastbegin
+		 }
+	  }
+	  allow = {
+		 prisoner = no
+		 age = 15
+		 wealth = 100
+	  }
+	  effect = {
+		 wealth = -100
+		 add_trait = lookingforkraken
+		 character_event = { id = meereen_events.8 days = 20 }
+	  }
+	  ai_will_do = {
+		 factor = 0
+	  }
+   }
+   
+      ladywave = {
+	  is_high_prio = yes
+	  potential = {
+		 has_dynasty_flag = omg ## delete it when quest will be complete
+		 has_dynasty_flag = ladywave
+		 NOT = {
+			trait = lookingforkraken
+			has_character_flag = krakenfeastbegin
+		 }
+	  }
+	  allow = {
+		 prisoner = no
+		 age = 15
+		 wealth = 30
+	  }
+	  effect = {
+		 wealth = -30
+		 add_trait = lookingforkraken
+		 character_event = { id = ladywave_events.0 days = 10 }
+	  }
+	  ai_will_do = {
+		 factor = 0
+	  }
+   }
+
+   blacksmith = {
+	  is_high_prio = yes
+	  potential = {
+		 has_dynasty_flag = blacksmithnorvos
+		 NOT = {
+			trait = lookingforkraken
+			has_character_flag = krakenfeastbegin
+		 }
+	  }
+	  allow = {
+		 prisoner = no
+		 age = 15
+		 wealth = 30
+	  }
+	  effect = {
+		 wealth = -30
+		 add_trait = lookingforkraken
+		 character_event = { id = blacksmith_events.0 days = 10 }
+	  }
+	  ai_will_do = {
+		 factor = 0
+	  }
+   }
+   
+   deeper = {
+	  is_high_prio = yes
+	  potential = {
+		 has_artifact = sword_first_part
+		 has_artifact = sword_second_part
+		 NOT = {
+			has_character_flag = krakenfeastbegin
+			has_artifact = deeper
+			trait = lookingforkraken
+		 }
+	  }
+	  allow = {
+		 prisoner = no
+		 age = 15
+		 wealth = 30
+	  }
+	  effect = {
+		 wealth = -30
+		 add_trait = lookingforkraken
+		 character_event = { id = blacksmith_events.0 days = 5 }
+	  }
+	  ai_will_do {
+		 factor = 1
+	  }
+   }
+   
+   general = {
+	  potential = {
+		 prisoner = no
+		 age = 11
+		 is_ruler = yes
+	  }
+	  allow = {
+		 NOT = { has_character_modifier = hiredot }
+		 scaled_wealth = 2
+		 wealth = 100
+		 prisoner = no
+	  }
+	  effect = {
+		 scaled_wealth = -1
+		 wealth = -100
+		 add_character_modifier = { modifier = hiredot duration = 900 }
+		 
+		 character_event = {id = generals_events.0 days = 5 }		 
+	  }
+	  ai_will_do = {
+		 factor = 0.1
+		 modifier = {
+			factor = 0.8
+			war = yes
+		 }
+	  }
+   }
+   
+   huntkraken = {
+	  is_high_prio = yes
+
+	  potential = {
+		 NOT = {
+			has_character_flag = hunt_flag_decision
+			has_character_flag = hunt_flag_chain
+			has_character_flag = krakenfeast
+			has_character_flag = krakenfeastbegin
+		 }
+	  }
+	  
+	  allow = {
+		 NOT = {
+		    has_character_modifier = wasonkrakenhunt
+			has_character_flag = hunt_flag_decision
+			has_character_flag = hunt_flag_chain
+			trait = lookingforkraken
+			trait = blinded
+			trait = wounded
+			trait = craven
+		 }
+		 ##		 war = no
+		 prisoner = no
+		 is_ill = no
+		 is_incapable = no
+		 age = 16
+		 wealth = 50
+		 has_regent = no
+		 war = no
+	  }
+
+	  effect = {
+		 
+		 wealth = -50
+		 add_trait = lookingforkraken
+		 set_character_flag = hunt_flag_decision
+		 
+		 character_event = { id = hunt_events.1 days = 4} ## lishnee, no na vsyakiy
+	  }
+	  
+	  ai_will_do = {
+		 factor = 0.5
+		 modifier = {
+			factor = 0.7
+			trait = lunatic
+		 }
+		 modifier = {
+			factor = 0.5
+			trait = brave
+		 }
+		 modifier = {
+			factor = 0.8
+			trait = ambitious
+		 }
+		 modifier = {
+			factor = 0.3
+			trait = trusting
+		 }
+	  }
+   }
+   krakenfeast = {
+	  is_high_prio = yes
+
+	  potential = {
+		 has_character_flag = krakenfeast ## after reapter or killkraken
+		 NOT = { trait = lookingforkraken }
+	  }	  
+
+	  allow = {
+		 has_regent = no
+		 prisoner = no
+		 wealth = 300
+		 war = no
+	  }
+	  effect = {
+		 character_event = { id = krakenfeast_events.0  }
+		 set_character_flag = krakenfeastbegin
+		 clr_character_flag = krakenfeast
+	  }
+	  
+	  ai_will_do = {
+		 factor = 1
+	  }
+   }
+}## dont del

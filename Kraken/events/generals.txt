@@ -1,0 +1,167 @@
+namespace = generals_events
+
+character_event = {
+   is_triggered_only = yes
+   title = "Looking for a Great Commander"
+   id = generals_events.0
+   desc = EVTDESC_generals_events.0
+   picture = GFX_evt_dothraki
+   option = {
+	  name = EVTOPTA_generals_events.0
+	  hidden_tooltip = {
+		 random_list = {
+			20 = {
+			   create_random_soldier = {
+				  random_traits = no
+				  female = no
+				  dynasty = NONE
+				  culture = dothraki
+				  religion = great_shepherd
+				  trait = strong
+				  trait = dwarf
+				  trait = sickly
+				  trait = brilliant_strategist
+				  trait =  cavalry_leader
+				  trait = dull
+				  trait = proud
+				  trait = greedy
+				  trait = ambitious
+				  trait = one_handed
+				  trait = one_legged
+				  trait = dumb
+				  trait = scars
+			   }
+
+			   new_character = {				
+				  remove_trait = craven
+				  remove_trait = weak
+				  remove_trait = wroth
+				  remove_trait = fair
+				  change_martial = 10
+				  set_character_flag = invited_soldier
+				  save_event_target_as = invited_character
+				  opinion = { who = ROOT modifier = opinion_hire_me value = 1 years = 3 }
+								  
+			   }
+			}
+
+			20 = {
+			   create_random_soldier = {
+				  random_traits = yes
+				  female = no
+				  dynasty = NONE
+				  culture = dothraki
+				  religion = great_shepherd
+				  trait = brilliant_strategist
+				  trait =  cavalry_leader
+				  trait = cruel
+				  trait = shy
+				  trait = scars
+			   }
+
+			   new_character = {				
+				  remove_trait = craven
+				  remove_trait = weak
+				  remove_trait = dumb
+				  remove_trait = wroth
+				  remove_trait = fair
+				  change_martial = 13
+				  set_character_flag = invited_soldier
+				  save_event_target_as = invited_character
+				  opinion = { who = ROOT modifier = opinion_hire_me value = 1 years = 3 }
+			   }
+			}
+			20 = {
+			   create_random_soldier = {
+				  random_traits = yes
+				  female = no
+				  dynasty = NONE
+				  culture = dothraki
+				  religion = great_shepherd
+				  trait = brilliant_strategist
+				  trait = strong
+				  trait = scars
+				  trait =  cavalry_leader
+			   }
+
+			   new_character = {				
+				  remove_trait = craven
+				  remove_trait = weak
+				  remove_trait = dumb
+				  remove_trait = wroth
+				  remove_trait = fair
+				  change_martial = 16
+				  set_character_flag = invited_soldier
+				  save_event_target_as = invited_character
+				  opinion = { who = ROOT modifier = opinion_hire_me value = 1 years = 3 }
+								  
+			   }
+			}
+			20 = {
+			   create_random_soldier = {
+				  random_traits = yes
+				  female = no
+				  dynasty = NONE
+				  culture = dothraki
+				  religion = great_shepherd
+				  trait = brilliant_strategist
+				  trait = strong
+				  trait = fair
+				  trait = scars
+				  trait = duelist
+				  trait = patient
+				  trait =  cavalry_leader
+
+			   }
+
+			   new_character = {				
+				  remove_trait = craven
+				  remove_trait = weak
+				  remove_trait = dumb
+				  remove_trait = wroth
+				  change_martial = 18
+				  set_character_flag = invited_soldier
+				  save_event_target_as = invited_character
+				  opinion = { who = ROOT modifier = opinion_hire_me value = 1 years = 3 }
+								  
+			   }
+			}
+			
+			20 = {
+			   create_random_soldier = {
+				  random_traits = yes
+				  female = yes
+				  dynasty = actually_culture
+				  culture = dothraki
+				  religion = great_shepherd
+				  trait = brilliant_strategist
+				  trait = strong
+				  trait = disfigured
+				  trait = fair
+				  trait = genius
+				  trait = scars
+				  trait = duelist
+				  trait = patient
+				  trait = one_eyed
+				  trait =  cavalry_leader
+
+			   }
+			   new_character = {				
+				  remove_trait = craven
+				  remove_trait = weak
+				  remove_trait = dumb
+				  remove_trait = wroth
+				  remove_trait = fair
+				  change_martial = 20
+				  set_character_flag = invited_soldier
+				  save_event_target_as = invited_character
+				  opinion = { who = ROOT modifier = opinion_hire_me value = 1 years = 3 }
+
+			   }
+			}
+		 }
+		 character_event = { id = NE.1 }
+		 
+	  }
+   }
+}

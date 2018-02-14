@@ -1,0 +1,1473 @@
+namespace = hunt_events ## pars
+namespace = north_events ##
+namespace = krakenfeast_events ################ !!!
+namespace = blacksmith_events
+namespace = ladywave_events
+namespace = meereen_events
+
+## hunt_events.? & north_events.? ##
+##               |                ##
+
+narrative_event = { ## bolshoe okno
+   is_triggered_only = yes
+   title = EVTNAME_hunt_events.1 ## titla
+   id = hunt_events.1
+   desc = EVTDESC_hunt_events.1
+   picture = GFX_evt_firsthuntkraken
+   border = GFX_event_narrative_frame_diplomacy
+
+   option = {
+	  name = EVTOPTA_hunt_events.1
+	  character_event = { id = north_events.1 days = 40 }
+	  
+   }
+   option = {
+	  name = EVTOPTB_hunt_events.1
+	  custom_tooltip = { text = TOOLTIPtest }
+   }
+   option = {
+	  name = EVTOPTC_hunt_events.1
+	  prestige = 100				
+   }
+   option = {
+	  name = EVTOPTD_hunt_events.1
+	  prestige = 100
+   }
+   
+}
+
+narrative_event = {
+   is_triggered_only = yes
+   id = north_events.1
+   desc = EVTDESC_north_events.1
+   picture = GFX_evt_skagos
+   border = GFX_event_narrative_frame_diplomacy
+   
+   option = {
+	  
+	  name = EVTOPTA_north_events.1
+	  custom_tooltip = { text = TOOLTIP_north_events_1A_tooltip }
+	  hidden_tooltip = {
+		 random_list = {
+			50 = { character_event = { id = hunt_events.0 days = 14 }  } ## nothing 
+			30 = { character_event = { id = north_events.3 days = 14 } } ## shark good # pici net?
+			15 = { character_event = { id = north_events.6 days = 14 } } ## part of sword NET
+			5 =  { character_event = { id = north_events.5 days = 14 } } ## kraken death
+		 }
+	  }
+   }
+   option = {
+	  name = EVTOPTB_north_events.1
+	  character_event = { id = north_events.20 days = 2 }
+   }
+   option = {                                                           ## hidden attack kraken
+	  trigger = {
+		 OR = {
+			trait = lunatic
+		 }
+		 NOR = {
+			has_character_flag = killkraken
+		 }
+	  }
+	  tooltip_info = lunatic
+	  name = EVTOPTE_north_events.1
+	  character_event = { id = hunt_events.9 days = 1 }
+   }
+
+   option = {                                                           ## hidden attack kraken
+	  trigger = {
+		 OR = {
+			trait = ambitious
+		 }
+		 NOR = {
+			has_character_flag = killkraken
+		 }
+	  }
+	  tooltip_info = ambitious
+	  name = EVTOPTE_north_events.1
+	  character_event = { id = hunt_events.9 days = 1 }
+   }
+   option = {                                                           ## hidden attack kraken
+	  trigger = {
+		 OR = {
+			trait = brave
+		 }
+		 NOR = {
+			has_character_flag = killkraken
+		 }
+	  }
+	  tooltip_info = brave
+	  name = EVTOPTE_north_events.1
+	  character_event = { id = hunt_events.9 days = 1 }
+   }
+   
+}
+character_event = {
+   id = north_events.20
+   is_triggered_only = yes
+   desc = EVTDESC_north_events.20
+   picture = GFX_evt_beachskagos
+
+   option = {	  
+	  name = EVTOPTA_north_events.20
+	  custom_tooltip = { text = TOOLTIP_north_events_20A_tooltip }
+	  hidden_tooltip = {
+		 random_list = {
+			30 = { character_event = { id = hunt_events.22 days = 7 } } ## nothing
+			30 = { character_event = { id = north_events.4 days = 7 } } ## shark underwater
+			20 = { character_event = { id = north_events.7 days = 7 } } ## the north map
+			20 = { character_event = { id = north_events.8 days = 7 } } ## part of sword BEACH
+		 }
+	  }
+   }  
+}
+
+character_event = {																		 ## home beach
+   id = hunt_events.22
+   is_triggered_only = yes
+   desc = EVTDESC_hunt_events.22
+   picture = GFX_evt_beach
+   border = GFX_event_normal_frame_war
+
+   option = {
+	  name = EVTOPTA_hunt_events.22
+	  set_character_flag = hunt_flag_chain
+	  add_trait = cough
+   }
+}
+
+character_event = {																		 ## lunatic kraken
+   id = hunt_events.9
+   is_triggered_only = yes
+   desc = EVTDESC_hunt_events.9
+   picture = GFX_evt_jumpwater
+   border = GFX_event_normal_frame_war
+
+   option = {
+	  name = EVTOPTA_hunt_events.9
+	  custom_tooltip = { text = TOOLTIP_hunt_events.9A_tooltip }
+	  hidden_tooltip = {
+		 random_list = {
+			60 = { character_event = { id = north_events.10 days = 1 } } ## go search him found
+			40 = { character_event = { id = north_events.19 days = 1 } } ## nothing go home
+		 }
+	  }
+   }
+   option = {
+	  trigger = { trait = ambitious }
+	  name = EVTOPTB_hunt_events.9
+	  tooltip_info = ambitious
+	  custom_tooltip = { text = TOOLTIP_hunt_events.9B_tooltip }
+	  hidden_tooltip = {
+		 random_list = {
+			90 = { character_event = { id = north_events.10 days = 2 } }
+			10 = { death = yes }
+		 }
+	  }
+   }
+}
+
+character_event = {																		 ## kraken kill you or no
+   id = north_events.10
+   is_triggered_only = yes
+   desc = EVTDESC_north_events.10
+   picture = GFX_evt_lookingforkraken
+   border = GFX_event_normal_frame_war
+
+   option = {
+	  name = EVTOPTA_north_events.10
+	  custom_tooltip = { text = TOOLTIP_north_events.10A_tooltip }
+	  hidden_tooltip = {
+		 random_list = {
+			50 = { character_event = { id = north_events.21 days = 1 } }  ## kill you
+			30 = { character_event = { id = north_events.18 days = 1 } } ## talk with you
+			20 = { character_event = { id = north_events.11 days = 1 } } ## you kil him
+		 }
+	  }
+   }
+   option = {
+	  trigger = { trait = quick }
+	  name = EVTOPTB_hunt_events.10
+	  tooltip_info = quick
+	  custom_tooltip = { text = TOOLTIP_hunt_events.10B_tooltip }
+	  hidden_tooltip = {
+		 random_list = {
+			80 = { character_event = { id = north_events.11 days = 2 } }
+			20 = { death = yes }
+		 }
+	  }
+   }	 
+   option = {
+	  trigger = { trait = duelist }
+	  name = EVTOPTC_hunt_events.10
+	  tooltip_info = duelist
+	  custom_tooltip = { text = TOOLTIP_hunt_events.10C_tooltip }
+	  hidden_tooltip = {
+		 random_list = {
+			90 = { character_event = { id = north_events.11 days = 2 } }
+			10 = { death = yes }
+		 }
+	  }
+   }	 
+}
+character_event = {																		 ## kraken kill you
+   id = north_events.21
+   is_triggered_only = yes
+   desc = EVTDESC_north_events.21
+   picture = GFX_evt_lookingforkraken
+   border = GFX_event_normal_frame_war
+
+   option = {
+	  name = EVTOPTA_north_events.21
+	  death = yes   ## kill you
+   }
+}
+
+narrative_event = {															 ## you kill kraken
+   id = north_events.11
+   is_triggered_only = yes
+   desc = EVTDESC_north_events.11
+   picture = GFX_evt_krakendead
+   border = GFX_event_narrative_frame_war
+
+   option = {
+	  name = EVTOPTA_north_events.11
+	  OR = {
+		 if = { limit = { NOT = {
+							 trait = strong  } }
+				add_trait = krakenseeker
+				add_trait = wounded
+				add_trait = one_handed
+				add_trait = one_legged
+				add_trait = disfigured 
+				set_character_flag = hunt_flag_chain
+				prestige = 500
+				set_character_flag = krakenfeast
+				set_character_flag = killkraken
+			  }
+		 if = { limit = { trait = strong } 
+				add_trait = krakenseeker
+				add_trait = wounded
+				add_trait = disfigured 
+				set_character_flag = hunt_flag_chain
+				prestige = 700
+				set_character_flag = krakenfeast
+				set_character_flag = killkraken
+			  }
+	  }
+   }
+}
+character_event = {																		 ## kraken talk with you
+   ##   title = "Kraken"
+   id = north_events.18
+   is_triggered_only = yes
+   desc = EVTDESC_north_events.18
+   picture = GFX_evt_krakeneye
+   border = GFX_event_normal_frame_war
+
+   option = {	  
+	  name = EVTOPTA_north_events.18
+	  OR = {
+		 if = { limit = { trait = zealous }  
+				add_trait = one_eyed
+				add_trait = depressed
+				set_character_flag = hunt_flag_chain
+			  }
+		 else = { 
+			   add_trait = zealous
+			   add_trait = blinded
+			   set_character_flag = hunt_flag_chain
+		 }
+			}
+}
+}
+
+character_event = {																		 ## go homekraken
+   id = north_events.19
+   is_triggered_only = yes
+   desc = EVTDESC_north_events.19
+   picture = GFX_evt_water
+   border = GFX_event_normal_frame_diplomacy
+   set_character_flag = hunt_flag_chain
+   option = {
+	  name = EVTOPTA_north_events.19
+	  random_list = {
+		 30 = { add_trait = cough }
+		 30 = { add_trait = pneumonic }
+		 30 = { add_trait = sickly }
+		 10 = { add_trait = cancer }
+	  }
+	  add_trait = cough
+	  remove_trait = lookingforkraken
+	  clr_character_flag = hunt_flag_decision ## END CHAIN		 IMPORTANT
+	  clr_character_flag = hunt_flag_chain
+	  add_character_modifier = { modifier = wasonkrakenhunt duration = 365 }
+
+
+   }
+}
+
+character_event = {																		 ## Go home nothing found
+   id = hunt_events.0
+   is_triggered_only = yes
+   desc = EVTDESC_hunt_events.0
+   picture = GFX_evt_gohomehunt
+   border = GFX_event_normal_frame_diplomacy
+
+   option = {
+	  name = EVTOPTA_hunt_events.0
+	  remove_trait = lookingforkraken
+	  clr_character_flag = hunt_flag_decision ## END CHAIN		 IMPORTANT
+	  clr_character_flag = hunt_flag_chain
+	  add_character_modifier = { modifier = wasonkrakenhunt duration = 365 }
+   }
+}
+
+character_event = {																		 ## Go home n end travel trigger decide
+   id = hunt_events.2
+   desc = EVTDESC_hunt_events.2
+   picture = GFX_evt_gohomehunt
+   border = GFX_event_normal_frame_diplomacy
+
+   trigger = { has_character_flag = hunt_flag_chain }
+   mean_time_to_happen = { days = 21 }
+   
+   option = {
+	  name = EVTOPTA_hunt_events.2
+	  remove_trait = lookingforkraken      ## too
+	  clr_character_flag = hunt_flag_decision # END CHAIN		## IMPORTANT
+	  clr_character_flag = hunt_flag_chain
+	  add_character_modifier = { modifier = wasonkrakenhunt duration = 365 }
+   }
+}
+character_event = {																		 ## Go home n end travel immediatly
+   id = hunt_events.3
+   is_triggered_only = yes
+   desc = EVTDESC_hunt_events.3
+   picture = GFX_evt_gohomehunt
+   border = GFX_event_normal_frame_diplomacy
+
+   option = {
+	  name = EVTOPTA_hunt_events.3
+	  remove_trait = lookingforkraken
+	  clr_character_flag = hunt_flag_decision ## END CHAIN		 IMPORTANT
+	  clr_character_flag = hunt_flag_chain
+	  add_character_modifier = { modifier = wasonkrakenhunt duration = 365 }
+
+   }
+}
+
+character_event = {																		## shark prestige +50
+   is_triggered_only = yes
+   id = north_events.3
+   desc = EVTDESC_north_events.3
+   picture = GFX_evt_gohomehunt ## nuzhno naiti picu
+   border = GFX_event_normal_frame_war
+
+   option = {
+	  name = EVTOPTA_north_events.3
+	  set_character_flag = hunt_flag_chain
+	  add_character_modifier = { modifier = wasonkrakenhunt duration = 365 }
+	  prestige = 50
+   }
+}
+
+character_event = {																		## shark underwater 40 30 20 10
+   is_triggered_only = yes
+   id = north_events.4
+   desc = EVTDESC_north_events.4
+   picture = GFX_evt_sharkuw 
+   border = GFX_event_normal_frame_war
+
+   option = {
+	  name = EVTOPTA_north_events.4
+	  custom_tooltip = { text = TOOLTIP_north_events_4A_tooltip }
+	  hidden_tooltip = {
+		 random_list = {
+			30 = { death = yes }
+			30 = { character_event = { id = north_events.15 days = 1 } } ## wound
+			20 = { character_event = { id = north_events.16 days = 1 } } ## wound one_legged
+			10 = { character_event = { id = north_events.17 days = 1 } } ## home
+			10 = { character_event = { id = north_events.12 days = 1 } } ## strange race
+			
+		 }
+	  }
+   }
+   
+}
+character_event = {																		## wound
+   is_triggered_only = yes
+   id = north_events.15
+   desc = EVTDESC_north_events.15
+   picture = GFX_evt_sharkuw
+   border = GFX_event_normal_frame_war
+
+   option = {
+	  name = EVTOPTA_north_events.15
+	  add_trait = wounded
+	  add_trait = cough
+	  set_character_flag = hunt_flag_chain
+   }
+}
+character_event = {																		## wound + one
+   is_triggered_only = yes
+   id = north_events.16
+   desc = EVTDESC_north_events.16
+   picture = GFX_evt_sharkuw
+   border = GFX_event_normal_frame_war
+
+   option = {
+	  name = EVTOPTA_north_events.16
+	  add_trait = wounded add_trait = one_legged
+	  add_trait = cough
+	  set_character_flag = hunt_flag_chain
+	  
+   }
+}
+character_event = {																		## g home
+   is_triggered_only = yes
+   id = north_events.17
+   desc = EVTDESC_north_events.17
+   picture = GFX_evt_beach
+   border = GFX_event_normal_frame_diplomacy
+
+   option = {
+	  name = EVTOPTA_north_events.17
+	  set_character_flag = hunt_flag_chain
+   }
+}
+
+
+character_event = {																		## strange race
+   is_triggered_only = yes
+   id = north_events.12
+   desc = EVTDESC_north_events.12
+   picture = GFX_evt_wtfhunt
+   border = GFX_event_normal_frame_intrigue
+
+   option = {
+	  name = EVTOPTA_north_events.12
+	  custom_tooltip = { text = TOOLTIP_north_events.12A_tooltip }
+	  hidden_tooltip = {
+		 random_list = {
+			60 = { death = yes }
+			40 = { character_event = { id = north_events.13 } }		## save			 
+		 }
+	  }
+   }
+}
+character_event = {																		## sharks dead from race
+   is_triggered_only = yes id = north_events.13
+   desc = EVTDESC_north_events.13 picture = GFX_evt_sharkracesavehunt
+   picture = GFX_evt_sharkracesavehunt
+   border = GFX_event_normal_frame_war
+   
+   option = {
+	  set_character_flag = hunt_flag_chain
+	  name = EVTOPTA_north_events.13
+	  add_trait = paranoid
+   }
+}
+
+character_event = {																		## kraken kill all
+   is_triggered_only = yes
+   id = north_events.5
+   desc = EVTDESC_north_events.5
+   picture = GFX_evt_krakendeadhunt
+   border = GFX_event_normal_frame_war
+
+   option = {
+	  name = EVTOPTA_north_events.5
+	  death = yes
+   }
+}
+
+character_event = {																		## sword NET SECOND
+   is_triggered_only = yes
+   id = north_events.6
+   desc = EVTDESC_north_events.6
+   picture = GFX_evt_water
+   border = GFX_event_normal_frame_religion
+   
+   option = {
+	  name = "EVTOPTA_north_events.6"
+	  OR = {
+		 if = {
+			limit = {
+			   has_artifact = sword_second_part
+			}
+			character_event = { id = north_events.14 days = 3}
+		 }
+		 if = {
+			limit = {
+			   NOT = {
+				  has_artifact = sword_second_part
+			   }
+			}
+			add_artifact = sword_second_part
+			set_character_flag = hunt_flag_chain
+			days = 3
+		 }
+	  }
+   }
+}
+
+character_event = {																		## north part of map
+   is_triggered_only = yes
+   id = north_events.7
+   desc = EVTDESC_north_events.7
+   picture = GFX_evt_beach
+   border = GFX_event_normal_frame_religion
+
+   option = {
+	  name = "EVTOPTA_north_events.7"
+	  OR = {
+		 if = {
+			limit = {
+			   has_artifact = north_map
+			}
+			character_event = { id = north_events.14 days = 3}
+		 }
+		 if = {
+			limit = {
+			   NOT = {
+				  has_artifact = north_map
+			   }
+			}
+			days = 3
+			add_artifact = north_map
+			set_character_flag = hunt_flag_chain
+		 }
+	  }
+   }
+}
+
+character_event = {																		## sword beach FIRST
+   is_triggered_only = yes
+   id = north_events.8
+   desc = EVTDESC_north_events.8
+   picture = GFX_evt_beach
+   border = GFX_event_normal_frame_religion
+
+   option = {
+	  name = "EVTOPTA_north_events.8"
+	  OR = {
+		 if = {
+			limit = {
+			   has_artifact = sword_first_part
+			}
+			character_event = { id = north_events.14 days = 3}
+		 }
+		 if = {
+			limit = {
+			   NOT = {
+				  has_artifact = sword_first_part
+			   }
+			}
+			add_artifact = sword_first_part
+			set_character_flag = hunt_flag_chain
+			days = 3
+		 }
+	  }
+   }
+}
+
+character_event = {																		## into dust
+   is_triggered_only = yes
+   id = north_events.14
+   desc = EVTDESC_north_events.14
+   picture = GFX_evt_handsand
+   border = GFX_event_normal_frame_religion
+
+   option = {
+	  name = EVTOPTA_north_events.14
+	  set_character_flag = hunt_flag_chain
+	  wealth = 40
+   }
+}
+####    ####
+##  FEST  ##
+####  |  ###
+
+narrative_event = {                                 ## main feast start
+   title = "The Great Feast"
+   is_triggered_only = yes
+   id = krakenfeast_events.0
+   desc = EVTDESC_krakenfeast_events.0
+   picture = GFX_evt_feast
+   border = GFX_event_narrative_frame_diplomacy
+
+   option = {
+	  name = EVTOPTA_krakenfeast_events.0
+	  character_event = { id = krakenfeast_events.1 days = 3}  ## only family
+	  wealth = -100
+	  save_event_target_as = usurpbastard
+   }
+   option = {
+	  name = EVTOPTB_krakenfeast_events.0
+	  wealth = -300
+	  character_event = { id = krakenfeast_events.3 days = 30}     ## world
+   }
+   option = {
+	  name = EVTOPTC_krakenfeast_events.0                     ## repeater
+	  set_character_flag = krakenfeast
+   }
+}
+
+character_event = { ## family
+   is_triggered_only = yes
+   id = krakenfeast_events.1
+   desc = EVTDESC_krakenfeast_events.1
+   picture = GFX_evt_feast
+   border = GFX_event_normal_frame_diplomacy
+
+   option = {
+	  name = EVTOPTA_krakenfeast_events.1
+
+	  create_character = {		 
+		 female = no
+		 dynasty = ROOT
+		 culture = ROOT
+		 religion = ROOT
+		 age = 23
+		 trait = ambitious
+		 trait = impaler
+		 trait = genius
+		 trait = one_eyed
+		 trait = elusive_shadow
+		 trait = scarred
+		 trait = cruel
+		 trait = paranoid
+		 trait = cynical
+		 trait = lisp
+		 trait = frail
+		 prestige = 50
+	  }
+	  new_character = {
+		 set_father = PREV
+		 change_martial = 5
+		 change_intrigue = 8
+		 change_diplomacy = 8
+		 set_character_flag = bastardfeast
+		 save_event_target_as = bastardfeast
+	  }
+	  AND = {
+		 character_event = { id = krakenfeast_events.4 } ## bastard
+		 character_event = { id = krakenfeast_events.6 days = 2 } ## court debt
+		 character_event = { id = krakenfeast_events.7 days = 3 } ## pirate sea
+		 character_event = { id = krakenfeast_events.8 days = 4 } ## end feast
+	  }
+   }
+}
+
+character_event = { ##world
+   is_triggered_only = yes
+   id = krakenfeast_events.3
+   desc = EVTDESC_krakenfeast_events.3
+   picture = GFX_evt_earvanille
+   border = GFX_event_normal_frame_diplomacy
+
+   option = {
+	  name = EVTOPTA_krakenfeast_events.1
+
+	  create_character = {		 
+		 female = no
+		 dynasty = ROOT
+		 culture = ROOT
+		 religion = ROOT
+		 age = 23
+		 trait = ambitious
+		 trait = impaler
+		 trait = genius
+		 trait = one_eyed
+		 trait = elusive_shadow
+		 trait = scarred
+		 trait = cruel
+		 trait = paranoid
+		 trait = cynical
+		 trait = lisp
+		 trait = frail
+		 prestige = 50
+	  }
+	  new_character = {
+		 set_father = PREV
+		 change_martial = 5
+		 change_intrigue = 8
+		 change_diplomacy = 8
+		 set_character_flag = bastardfeast
+		 save_event_target_as = bastardfeast
+	  }
+	  AND = {
+		 character_event = { id = krakenfeast_events.4 } ## bastard
+		 character_event = { id = krakenfeast_events.6 days = 2 } ## court debt
+		 character_event = { id = krakenfeast_events.7 days = 3 } ## pirate sea
+		 character_event = { id = krakenfeast_events.9 days = 4 } ## rab
+		 ##	  character_event = { id = krakenfeast_events.10 days = 5 } ## good soldier
+	  }
+   }
+}
+#################
+## fest events ##
+##     |       ##
+##     |       ##
+
+narrative_event = {                 ## bastard choose
+   is_triggered_only = yes
+   id = krakenfeast_events.4
+   desc = EVTDESC_krakenfeast_events.4
+   picture = GFX_evt_audiencevanille
+   border = GFX_event_narrative_frame_diplomacy
+
+   option = {
+	  name = EVTOPTA_krakenfeast_events.4
+	  event_target:bastardfeast = {	tooltip = { show_portrait = yes } }
+	  character_event = { id = krakenfeast_events.5 days = 120 }
+   }
+   
+   ##	  character_event = { id = krakenfeast_events.5 days = 1 }
+   option = {
+	  name = EVTOPTB_krakenfeast_events.4
+	  event_target:bastardfeast = { leave_court_effect = yes }
+   }
+   option = {	  
+	  name = EVTOPTC_krakenfeast_events.4
+	  trigger = { trait = arbitrary }
+	  tooltip_info = arbitrary
+	  event_target:bastardfeast = { death = yes }
+   }
+   option = {
+	  name = EVTOPTD_krakenfeast_events.4
+	  trigger = { trait = paranoid }
+	  tooltip_info = paranoid
+	  event_target:bastardfeast = { prisoner = yes }
+	  character_event = { id = krakenfeast_events.5 days = 120 }
+   }
+}
+
+character_event = {         ## bastard revolt
+   is_triggered_only = yes
+   id = krakenfeast_events.5
+   desc = EVTDESC_krakenfeast_events.5
+   picture = GFX_evt_nightvanille
+   border = GFX_event_normal_frame_intrigue
+
+   trigger = { event_target:bastardfeast = { is_alive = yes } }
+
+   option = {
+	  name = EVTOPTA_krakenfeast_events.5
+	  event_target:bastardfeast = {	tooltip = { show_portrait = yes } }
+	  any_demesne_title = {
+		 usurp_title = { target = event_target:bastardfeast type = claim }
+	  }
+	  ROOT = { death = yes }
+   }
+   option = {
+	  trigger = { intrigue = 20 }
+	  tooltip_info = intrigue 
+	  name = EVTOPTB_krakenfeast_events.5
+	  event_target:bastardfeast = { death = { death_reason = death_accident } }
+   }
+   option = {
+	  trigger = { intrigue = 20 }
+	  tooltip_info = intrigue 
+	  name = EVTOPTC_krakenfeast_events.5
+   }
+}
+
+character_event = { ## court debt
+   is_triggered_only = yes
+   id = krakenfeast_events.6
+   desc = EVTDESC_krakenfeast_events.6
+   picture = GFX_evt_audiencevanille
+   border = GFX_event_normal_frame_economy
+
+   immediate = {
+
+	  create_character = {
+		 random_traits = yes
+		 culture = ROOT
+		 religion = ROOT
+		 dynasty = NONE
+		 wealth = 50
+	  }
+	  new_character = {
+		 save_event_target_as = courtdebt
+	  }
+
+   }
+
+   option = {
+	  name = EVTOPTA_krakenfeast_events.6
+	  event_target:courtdebt = { tooltip = { show_portrait = yes } }
+	  
+   }
+   option = { ## two monts for debt
+	  name = EVTOPTB_krakenfeast_events.6 
+	  event_target:courtdebt = { tooltip = { show_portrait = yes } }
+	  wealth = -100
+	  character_event = { id = krakenfeast_events.12 days = 60 }
+   }
+
+   option = {
+	  name = EVTOPTC_krakenfeast_events.6
+	  trigger = { trait = arbitrary }
+	  add_character_modifier = { modifier = lawlessness duration = 1900 }  
+	  tooltip_info = arbitrary
+	  event_target:courtdebt = { death = { death_reason = death_accident } opinion = { who = ROOT modifier = opinion_lawlessness } }
+	  wealth = 50
+   }
+   
+   option = {
+	  name = EVTOPTD_krakenfeast_events.6
+	  trigger = { trait = greedy }
+	  add_character_modifier = { modifier = lawlessness duration = 1900 }
+	  tooltip_info = greedy
+	  event_target:courtdebt = { leave_court_effect = yes opinion = { who = ROOT modifier = opinion_lawlessness } }
+	  wealth = 50
+   }
+}
+
+character_event = { ## court go aways
+   is_triggered_only = yes
+   id = krakenfeast_events.12
+   desc = EVTDESC_krakenfeast_events.12
+   picture = GFX_evt_nightvanille
+   border = GFX_event_normal_frame_economy
+
+   immediate = {
+	  event_target:courtdebt = { death = { death_reason = death_accident } tooltip = { show_portrait = yes } }
+   }
+   option = {
+	  name = EVTOPTA_krakenfeast_events.12
+   }
+   option = {
+	  trigger = { trait = paranoid }
+	  name = EVTOPTB_krakenfeast_events.12
+	  tooltip_info = paranoid
+	  wealth = 150
+   }
+   option = {
+	  trigger = { trait = wroth }
+	  name = EVTOPTC_krakenfeast_events.12
+	  tooltip_info = wroth
+	  wealth = 100
+	  add_character_modifier = { modifier = lawlessness duration = 900 }
+   }
+   option = {
+	  trigger = { trait = arbitrary }
+	  name = EVTOPTD_krakenfeast_events.12
+	  tooltip_info = arbitrary
+	  wealth = 200
+	  add_character_modifier = { modifier = lawlessness duration = 900 }
+   }
+   
+}
+
+character_event = { ## pirate humor
+   is_triggered_only = yes
+   id = krakenfeast_events.7
+   desc = EVTDESC_krakenfeast_events.7
+   picture = GFX_evt_feast
+   border = GFX_event_normal_frame_diplomacy
+
+   immediate = {
+	  create_character = {
+		 random_traits = yes
+		 trait = pirate
+		 culture = ROOT
+		 religion = ROOT
+		 dynasty = NONE
+		 wealth = 50
+	  }
+	  new_character = {
+		 save_event_target_as = piratesea
+	  }
+
+   }
+   option = {
+	  event_target:piratesea = {	tooltip = { move_character = ROOT } }
+	  name = EVTOPTA_krakenfeast_events.7
+	  prestige = 150
+	  piety = 50
+	  add_trait = proud
+   }
+   option = {
+	  name = EVTOPTB_krakenfeast_events.7
+	  add_character_modifier = { modifier = goodkraken duration = 3600 } 
+   }
+   option = {
+	  trigger = { diplomacy = 15 }
+	  tooltip_info = diplomacy
+	  name = EVTOPTC_krakenfeast_events.7
+	  prestige = 300
+	  piety = 100
+	  add_character_modifier = { modifier = verygoodkraken duration = 3600 }
+   }
+   option = {
+	  trigger = { martial = 15 }
+	  tooltip_info = martial
+	  prestige = 300
+	  piety = 100
+	  add_trait = proud
+	  name = EVTOPTD_krakenfeast_events.7
+	  add_character_modifier = { modifier = verygoodkraken duration = 3600 }
+   }
+
+}
+
+character_event = { ## end feast
+   is_triggered_only = yes
+   id = krakenfeast_events.8
+   desc = EVTDESC_krakenfeast_events.8
+   picture = GFX_evt_feast
+   border = GFX_event_normal_frame_intrigue
+   immediate = {
+	  tooltip = { show_portrait = no }
+	  clear_event_target = courtdebt
+	  clear_event_target = piratesea
+	  clear_event_target = ladyfeast
+	  clr_character_flag = krakenfeast
+	  clr_character_flag = krakenfeastbegin
+   }
+   option = {
+	  name = EVTOPTA_krakenfeast_events.8
+	  
+   }
+
+   option = {
+	  trigger = { diplomacy = 20 }
+	  name = EVTOPTB_krakenfeast_events.8
+	  prestige =  500	  
+   }
+}
+
+character_event = { ## sum slaver
+   is_triggered_only = yes
+   id = krakenfeast_events.9
+   desc = EVTDESC_krakenfeast_events.9
+   picture = GFX_evt_audiencevanille
+   border = GFX_event_normal_frame_economy
+
+   immediate = {
+	  create_character = {
+		 trait = strong
+		 trait = naive_appeaser 
+		 trait = paranoid
+		 trait = wroth
+		 trait = envious
+		 trait = gluttonous
+		 female = no
+		 dynasty = random
+		 religion = harpy
+		 culture = meereenese
+	  }
+	  new_character = {
+		 save_event_target_as = sumslaver
+	  }
+   }
+   option = {
+	  name = EVTOPTA_krakenfeast_events.9
+	  character_event = { id = krakenfeast_events.10 }
+   }
+   option = {
+	  name = EVTOPTB_krakenfeast_events.9
+	  character_event = { id = krakenfeast_events.11 days = 1 }
+   }
+}
+
+character_event = { ## sum slave
+   is_triggered_only = yes
+   id = krakenfeast_events.10
+   desc = EVTDESC_krakenfeast_events.10
+   picture = GFX_evt_slave
+   border = GFX_event_normal_frame_economy
+
+   immediate = {
+	  create_character = {
+		 random_traits = yes
+		 age = 15
+		 female = yes
+		 dynasty = NONE
+		 religion = summer_rel
+		 culture = summer_islander
+		 trait = fair
+		 trait = shy
+		 trait = chaste
+		 trait = craven
+		 trait = homosexual
+		 trait = slave
+	  }
+	  new_character = {
+		 save_event_target_as = sumslave
+	  }
+   }
+
+   option = {
+	  trigger = { NOT = { primary_title = { has_law = slavery_0 } } }
+	  name = EVTOPTA_krakenfeast_events.10 
+	  event_target:sumslave = {	tooltip = { move_character = ROOT } }
+	  hidden_tooltip = {
+		 event_target:sumslaver = { leave_court_effect = yes } }
+	  character_event = { id = krakenfeast_events.11 days = 1 }
+   }  
+
+   option = {
+	  name = EVTOPTB_krakenfeast_events.10
+	  hidden_tooltip = {
+		 event_target:sumslave =  { leave_court_effect = yes }
+	  }
+	  event_target:sumslaver = { leave_court_effect = yes }
+	  character_event = { id = krakenfeast_events.11 days = 1 }
+	  
+   }
+   
+   option = {
+	  trigger = { primary_title = { OR = { has_law = slavery_1 has_law = slavery_2 has_law = slavery_3 } } }
+	  name = EVTOPTC_krakenfeast_events.10
+	  event_target:sumslave = {	tooltip = { move_character = ROOT } }
+	  prestige = 100
+	  hidden_tooltip = {
+		 event_target:sumslaver = { leave_court_effect = yes }
+	  }
+	  character_event = { id = krakenfeast_events.11 days = 1 }
+   }	  
+   option = {
+	  trigger = { primary_title = { has_law = slavery_0 } }
+	  name = EVTOPTD_krakenfeast_events.10	  
+	  event_target:sumslave = { remove_trait = slave }
+	  event_target:sumslaver = { death = { death_reason = death_accident } }
+	  character_event = { id = krakenfeast_events.11 days = 1 }
+   }
+}
+
+character_event = { ## ladywave
+   is_triggered_only = yes
+   id = krakenfeast_events.11
+   desc = EVTDESC_krakenfeast_events.11
+   picture = GFX_evt_ladywave
+   border = GFX_event_normal_frame_intrigue
+
+   immediate = {
+	  create_character = {
+		 age = 29
+		 female = yes
+		 dynasty = random
+		 religion = lady_of_the_waves
+		 culture = lysene
+		 trait = fair
+		 trait = brave
+		 trait = quick
+		 trait = proud
+		 trait = scholarly_theologian
+		 trait = just
+		 trait = erudite
+	  }
+	  new_character = {
+		 save_event_target_as = ladywave
+	  }
+   }
+
+   option = {
+	  name = EVTOPTA_krakenfeast_events.11
+	  wealth = 100
+	  add_trait = greedy
+	  character_event = { id = krakenfeast_events.13 days = 2 }
+   }
+
+   option = {
+	  name = EVTOPTB_krakenfeast_events.11
+	  add_trait = charitable
+	  character_event = { id = krakenfeast_events.14 }
+   }
+}
+character_event = { ## lady wave response
+   is_triggered_only = yes
+   id = krakenfeast_events.14
+   desc = EVTDESC_krakenfeast_events.14
+   picture = GFX_evt_ladywave
+   border = GFX_event_normal_frame_diplomacy
+
+   option = {
+	  name = EVTOPTA_krakenfeast_events.14
+	  set_dynasty_flag = ladywave
+	  set_dynasty_flag = ladywaveinvite
+	  character_event = { id = krakenfeast_events.13 days = 2 }
+   }
+}
+
+character_event = { ## blacksmith
+   is_triggered_only = yes
+   id = krakenfeast_events.13
+   desc = EVTDESC_krakenfeast_events.13
+   picture = GFX_evt_blacksmith
+   border = GFX_event_normal_frame_intrigue
+
+   immediate = {
+	  create_character = {
+		 age = 94
+		 female = no
+		 dynasty = random
+		 religion = valyrian_rel
+		 culture = eastern_valyrian
+		 trait = strong
+		 trait = proud
+		 trait = robust
+		 trait = tough_soldier
+		 trait = wroth
+		 trait = just
+	  }
+	  new_character = {
+		 save_event_target_as = blacksmithnorvos
+	  }
+   }
+
+   option = {
+	  name = EVTOPTA_krakenfeast_events.13
+	  set_dynasty_flag = blacksmithnorvos
+	  hidden_tooltip = {
+		 event_target:blacksmithnorvos = { leave_court_effect = yes }
+	  }
+	  character_event = { id = krakenfeast_events.8 days = 2 }
+   }
+}
+
+#######################
+## blacksmith_events ##
+##          |        ##
+##          |        ##
+
+character_event = {                       ## main blacksmith
+   is_triggered_only = yes  
+   id = blacksmith_events.0
+   desc = EVTDESC_blacksmith_events.0
+   picture = GFX_evt_blacksmith
+   border = GFX_event_normal_frame_diplomacy
+
+   option = {
+	  name = EVTOPTA_blacksmith_events.0  ## go into
+	  character_event = { id = blacksmith_events.1 }
+   }
+   option = {
+	  name = EVTOPTB_blacksmith_events.0  ## change my mind
+	  character_event = { id = blacksmith_events.7 days = 10 } ## home
+   }   
+}
+
+character_event = {        ## in house
+   is_triggered_only = yes  
+   id = blacksmith_events.1
+   desc = EVTDESC_blacksmith_events.1
+   picture = GFX_evt_blacksmith
+   border = GFX_event_normal_frame_diplomacy
+
+   option = {
+	  trigger = { has_artifact = sword_first_part has_artifact = sword_second_part } 
+	  name = EVTOPTA_blacksmith_events.1 ## i need repair it
+	  character_event = { id = blacksmith_events.4 }
+   }
+   option = {
+	  trigger = { has_artifact = north_map }
+	  name = EVTOPTB_blacksmith_events.1 ## can't
+	  character_event = { id = blacksmith_events.2 }
+   }
+   option = {
+	  name = EVTOPTC_blacksmith_events.1 ## sell
+	  character_event = { id = blacksmith_events.3 }
+   }
+   option = {
+	  name = EVTOPTD_blacksmith_events.1 ## go home
+	  character_event = { id = blacksmith_events.7 days = 10 } ## return
+   }
+}
+
+character_event = { ## no i can't
+   is_triggered_only = yes  
+   id = blacksmith_events.2
+   desc = EVTDESC_blacksmith_events.2
+   picture = GFX_evt_blacksmith
+   border = GFX_event_normal_frame_diplomacy
+
+   option = {
+	  name = EVTOPTA_blacksmith_events.2
+	  character_event = { id = blacksmith_events.1 }
+   }
+}
+
+character_event = { ## later
+   is_triggered_only = yes  
+   id = blacksmith_events.3
+   desc = EVTDESC_blacksmith_events.3
+   picture = GFX_evt_blacksmith
+   border = GFX_event_normal_frame_diplomacy
+
+   option = {
+	  name = EVTOPTA_blacksmith_events.3
+	  character_event = { id = blacksmith_events.1 }
+   }
+}
+
+character_event = { ## repair chose
+   is_triggered_only = yes  
+   id = blacksmith_events.4
+   desc = EVTDESC_blacksmith_events.4
+   picture = GFX_evt_blacksmith
+   border = GFX_event_normal_frame_economy
+
+   option = {
+	  trigger = { wealth = 1800 NOT = { has_dynasty_flag = repairdeeper } }
+	  name = EVTOPTA_blacksmith_events.4
+	  wealth = -2000
+	  destroy_artifact = sword_first_part
+	  destroy_artifact = sword_second_part
+	  character_event = { id = blacksmith_events.5 }
+   }
+   option = {
+	  name = EVTOPTB_blacksmith_events.4 ## i dont have that money
+	  character_event = { id = blacksmith_events.6 }
+   }
+   option = {
+	  name = EVTOPTC_blacksmith_events.4 ## what
+	  character_event = { id = blacksmith_events.9 } 
+   }
+}
+
+character_event = { ## okay now wait until i reapir it
+   is_triggered_only = yes  
+   id = blacksmith_events.5
+   desc = EVTDESC_blacksmith_events.5
+   picture = GFX_evt_blacksmith
+   border = GFX_event_normal_frame_intrigue
+
+   option = {
+	  name = EVTOPTA_blacksmith_events.5
+	  set_character_flag = repairdeeperdecision		  
+	  character_event = { id = blacksmith_events.7 days = 10 } ## home
+   }
+}
+
+character_event = { ## no money
+   is_triggered_only = yes  
+   id = blacksmith_events.6
+   desc = EVTDESC_blacksmith_events.6
+   picture = GFX_evt_blacksmith
+   border = GFX_event_normal_frame_diplomacy
+
+   option = {
+	  name = EVTOPTA_blacksmith_events.6
+	  character_event = { id = blacksmith_events.1 } ## return
+   }
+}
+
+character_event = { ## main home
+   is_triggered_only = yes  
+   id = blacksmith_events.7
+   desc = EVTDESC_blacksmith_events.7
+   picture = GFX_evt_blacksmith
+   border = GFX_event_normal_frame_diplomacy
+
+   option = {
+	  name = EVTOPTA_blacksmith_events.7
+	  remove_trait = lookingforkraken
+   }
+}
+
+character_event = { ## got deeper
+   is_triggered_only = yes  
+   id = blacksmith_events.8
+   desc = EVTDESC_blacksmith_events.8
+   picture = GFX_evt_blacksmith
+   border = GFX_event_normal_frame_diplomacy
+
+   option = {
+	  name = EVTOPTA_blacksmith_events.8
+	  add_artifact = deeper
+	  character_event = { id = blacksmith_events.1 } ## return
+   }
+}
+
+character_event = { ## alternative item
+   is_triggered_only = yes  
+   id = blacksmith_events.9
+   desc = EVTDESC_blacksmith_events.9
+   picture = GFX_evt_blacksmith
+   border = GFX_event_normal_frame_diplomacy
+
+   option = {
+	  name = EVTOPTA_blacksmith_events.9 ## nvm i go home
+	  character_event = { id = blacksmith_events.7 days = 10 } ## home
+   }
+   option = {
+	  name = EVTOPTB_blacksmith_events.9 ## and where is it?
+	  character_event = { id = blacksmith_events.10 }
+   }
+   option = {
+	  trigger = { has_artifact = dragon_egg }
+	  destroy_artifact = dragon_egg
+	  name = EVTOPTC_blacksmith_events.9
+	  character_event = { id = blacksmith_events.5 }	  
+   }
+}
+
+character_event = { ## i don 't know where
+   is_triggered_only = yes  
+   id = blacksmith_events.10
+   desc = EVTDESC_blacksmith_events.10
+   picture = GFX_evt_blacksmith
+   border = GFX_event_normal_frame_diplomacy
+
+   option = {
+	  name = EVTOPTA_blacksmith_events.10 ## i will search...
+	  character_event = { id = blacksmith_events.7 days = 10 } ## home
+	  set_dynasty_flag = ladywave
+	  set_dynasty_flag = ladywaveblacksmith
+   }
+   option = {
+	  name = EVTOPTB_blacksmith_events.10 ## nop
+	  character_event = { id = blacksmith_events.0 } ## at forge
+   }   
+}
+
+
+################
+### ladywave ###
+###     |    ###
+###     |    ###
+
+
+character_event = {            ## at ladywave's church
+   is_triggered_only = yes  
+   id = ladywave_events.0
+   desc = EVTDESC_ladywave_events.0
+   picture = GFX_evt_ladywave
+   border = GFX_event_normal_frame_diplomacy
+   
+   option = {	  
+	  name = EVTOPTA_ladywave_events.0 ## go into
+	  OR = {
+		 if = { NOT = {
+				   has_dynasty_flag = ladywaveinvite }
+				character_event = { id = ladywave_events.8 } }
+		 if = { has_dynasty_flag = ladywaveinvite
+				character_event = { id = ladywave_events.1 } }
+	  }
+   }
+	  option = {
+		 name = EVTOPTB_ladywave_events.0 ## nvm go home
+		 character_event = { id = ladywave_events.7 days = 10 }
+	  }      
+}
+
+character_event = {            ## main talk
+   is_triggered_only = yes 
+   id = ladywave_events.1
+   desc = EVTDESC_ladywave_events.1
+   picture = GFX_evt_ladywave
+   border = GFX_event_normal_frame_diplomacy
+
+   option = {
+	  name = EVTOPTA_ladywave_events.1         ## just meet
+	  character_event = { id = ladywave_events.7 days = 10 }
+   }
+   option = {
+	  trigger = { has_artifact = sword_first_part has_artifact = sword_second_part } 
+	  name = EVTOPTB_ladywave_events.1         ## you know what is it?
+	  character_event = { id = ladywave_events.2 }
+   }
+   option = {
+	  trigger = { has_artifact = deeper }
+	  name = EVTOPTC_ladywave_events.1         ## what are you think
+	  character_event = { id = ladywave_events.3 }
+   }
+   option = {
+	  trigger = { has_dynasty_flag = ladywaveblacksmith }
+	  name = EVTOPTD_ladywave_events.1         ## i need artifact
+	  character_event = { id = ladywave_events.4 }
+   }
+}
+
+character_event = {            ## sword part
+   is_triggered_only = yes  
+   id = ladywave_events.2
+   desc = EVTDESC_ladywave_events.2
+   picture = GFX_evt_ladywave
+   border = GFX_event_normal_frame_diplomacy
+
+   option = {
+	  name = EVTOPTA_ladywave_events.2
+	  character_event = { id = ladywave_events.1 }
+   }
+}
+
+character_event = {            ## not now
+   is_triggered_only = yes  
+   id = ladywave_events.3
+   desc = EVTDESC_ladywave_events.3
+   picture = GFX_evt_ladywave
+   border = GFX_event_normal_frame_diplomacy
+
+   option = {
+	  name = EVTOPTA_ladywave_events.3
+	  character_event = { id = ladywave_events.1 }
+   }
+}
+
+character_event = {            ## artifact 
+   is_triggered_only = yes  
+   id = ladywave_events.4
+   desc = EVTDESC_ladywave_events.4
+   picture = GFX_evt_ladywave
+   border = GFX_event_normal_frame_diplomacy
+
+   option = {
+	  name = EVTOPTA_ladywave_events.4 ## and what you want
+	  character_event = { id = ladywave_events.5 }
+   }
+}
+
+character_event = {            ## agree of no
+   is_triggered_only = yes  
+   id = ladywave_events.5
+   desc = EVTDESC_ladywave_events.5
+   picture = GFX_evt_ladywave
+   border = GFX_event_normal_frame_diplomacy
+   
+   option = {
+	  name = EVTOPTA_ladywave_events.5 ## agree
+	  character_event = { id = ladywave_events.7 days = 10 }
+	  set_dynasty_flag = ladywavequest
+   }
+
+   option = {
+	  name = EVTOPTB_ladywave_events.5 ## no
+	  character_event = { id = ladywave_events.7 days = 10 }
+   }
+}
+
+character_event = {            ## go home
+   is_triggered_only = yes  
+   id = ladywave_events.7
+   desc = EVTDESC_ladywave_events.7
+   picture = GFX_evt_ladywave
+   border = GFX_event_normal_frame_diplomacy
+
+   option = {
+	  name = EVTOPTA_ladywave_events.7
+	  remove_trait = lookingforkraken
+   }
+}
+
+character_event = {            ## not ladywaveinvite
+   is_triggered_only = yes  
+   id = ladywave_events.8
+   desc = EVTDESC_ladywave_events.8
+   picture = GFX_evt_ladywave ## drugoe
+   border = GFX_event_normal_frame_diplomacy
+
+   option = {
+	  name = EVTOPTA_ladywave_events.8
+	  character_event = { id = ladywave_events.0 }
+   }
+}
+
+## ladywavyinvite na vhod, ladywave na reshenie. esli net invite, to otpravyaut nah. ladywave daet blacksmith i feast na krakene.
+## v meereeni nuzhno kupit' rabinu. rabina predlagaet otpustit' za klad-yaico. yaico daet, ladywave shlet nah.   

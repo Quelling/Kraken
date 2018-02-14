@@ -1,0 +1,10 @@
+opinion_lawlessness = {
+   opinion = -100
+   months = 100
+   stacking = no
+}
+opinion_hire_me = {
+   opinion = 100
+   months = 40
+   stacking = no
+}

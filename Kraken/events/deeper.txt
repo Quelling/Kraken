@@ -1,0 +1,211 @@
+namespace = deeper_events
+
+narrative_event = {
+   is_triggered_only = yes
+   title = "Looking for blacksmith"
+   id = deeper_events.0
+   desc = EVTDESC_deeper_events.0
+   picture = GFX_evt_wtfhunt
+	  border = GFX_event_narrative_frame_diplomacy
+
+   option = {
+	  trigger = { NOT = { has_dynasty_flag = blacksmith_0 } }
+	  name = EVTOPTA_deeper_events.0
+	  character_event = { id = deeper_events.1  }     ## king's 
+   }
+   option = {
+	  trigger = { NOT = { has_dynasty_flag = blacksmith_1 } } 
+	  name = EVTOPTB_deeper_events.0
+	  character_event = { id = deeper_events.2  }     ## Meereen
+   }
+   option = {
+	  trigger = { NOT = { has_dynasty_flag = blacksmith_2 } } 
+	  name = EVTOPTC_deeper_events.0
+	  character_event = { id = deeper_events.3  }     ## braavos
+   }
+   option = {
+	  trigger = { has_dynasty_flag = ladywave }  ## must have flag from feast
+	  tooltip_info = "testovoe"
+	  name = EVTOPTC_deeper_events.0
+	  character_event = { id = deeper_events.3  }     ## Lys
+   }
+}
+
+narrative_event = {              ## king's landing desc
+   is_triggered_only = yes
+   title = "King's Landing"
+   id = deeper_events.1
+   desc = EVTDESC_deeper_events
+   picture = GFX_evt_wtfhunt
+   border = GFX_event_narrative_frame_diplomacy
+
+   option = {
+	  name = EVTOPTA_deeper_events.1
+	  character_event = { id = deeper_events.2 }
+   }
+}
+
+
+character_event = {                         ## where to go?
+   is_triggered_only = yes
+   id = deeper_events.2
+   desc = EVTDESC_deeper_events
+   picture = GFX_evt_wtfhunt
+   border = GFX_event_normal_frame_diplomacy
+
+   option = {
+	  name = EVTOPTA_deeper_events.2
+	  character_event = { id = deeper_events.3 } ## throne
+   }
+   option = {
+	  name = EVTOPTB_deeper_events.1
+	  character_event = { id = deeper_events.4 } ## city
+   }
+   option = {
+	  name = EVTOPTC_deeper_events.1
+	  character_event = { id = deeper_events.5 } ## harbor
+   }
+}
+
+character_event = {
+   is_triggered_only = yes
+   id = deeper_events.0
+   desc = EVTDESC_deeper_events
+   picture = GFX_evt_wtfhunt
+   border = GFX_event_normal_frame_diplomacy
+
+   option = {
+	  name = EVTOPTA_deeper_events.0
+   }
+   option = {
+	  name = EVTOPTB_deeper_events.0
+   }
+   option = {
+	  name = EVTOPTC_deeper_events.0
+   }
+}
+character_event = {
+   is_triggered_only = yes
+   id = deeper_events.0
+   desc = EVTDESC_deeper_events
+   picture = GFX_evt_wtfhunt
+   border = GFX_event_normal_frame_diplomacy
+
+   option = {
+	  name = EVTOPTA_deeper_events.0
+   }
+   option = {
+	  name = EVTOPTB_deeper_events.0
+   }
+   option = {
+	  name = EVTOPTC_deeper_events.0
+   }
+}
+character_event = {
+   is_triggered_only = yes
+   id = deeper_events.0
+   desc = EVTDESC_deeper_events
+   picture = GFX_evt_wtfhunt
+   border = GFX_event_normal_frame_diplomacy
+
+   option = {
+	  name = EVTOPTA_deeper_events.0
+   }
+   option = {
+	  name = EVTOPTB_deeper_events.0
+   }
+   option = {
+	  name = EVTOPTC_deeper_events.0
+   }
+}
+character_event = {
+   is_triggered_only = yes
+   id = deeper_events.0
+   desc = EVTDESC_deeper_events
+   picture = GFX_evt_wtfhunt
+   border = GFX_event_normal_frame_diplomacy
+
+   option = {
+	  name = EVTOPTA_deeper_events.0
+   }
+   option = {
+	  name = EVTOPTB_deeper_events.0
+   }
+   option = {
+	  name = EVTOPTC_deeper_events.0
+   }
+}
+character_event = {
+   is_triggered_only = yes
+   id = deeper_events.0
+   desc = EVTDESC_deeper_events
+   picture = GFX_evt_wtfhunt
+   border = GFX_event_normal_frame_diplomacy
+
+   option = {
+	  name = EVTOPTA_deeper_events.0
+   }
+   option = {
+	  name = EVTOPTB_deeper_events.0
+   }
+   option = {
+	  name = EVTOPTC_deeper_events.0
+   }
+}
+
+narrative_event = {                ## Meeren
+   is_triggered_only = yes
+   title = "Meereen"
+   id = deeper_events.0
+   desc = EVTDESC_deeper_events
+   picture = GFX_evt_wtfhunt
+   border = GFX_event_narrative_frame_diplomacy
+
+   option = {
+	  name = EVTOPTA_deeper_events.0
+   }
+   option = {
+	  name = EVTOPTB_deeper_events.0
+   }
+   option = {
+	  name = EVTOPTC_deeper_events.0
+   }
+}
+
+narrative_event = {                ## Braavos
+   is_triggered_only = yes
+   title = "Braavos"
+   id = deeper_events.0
+   desc = EVTDESC_deeper_events
+   picture = GFX_evt_wtfhunt
+   border = GFX_event_narrative_frame_diplomacy
+
+   option = {
+	  name = EVTOPTA_deeper_events.0
+   }
+   option = {
+	  name = EVTOPTB_deeper_events.0
+   }
+   option = {
+	  name = EVTOPTC_deeper_events.0
+   }
+}
+
+narrative_event = {                 ## Lys
+   is_triggered_only = yes
+   title = "Lys"
+   id = deeper_events.0
+   desc = EVTDESC_deeper_events
+   picture = GFX_evt_wtfhunt
+   border = GFX_event_narrative_frame_diplomacy
+
+   option = {
+	  name = EVTOPTA_deeper_events.0
+   }
+   option = {
+	  name = EVTOPTB_deeper_events.0
+   }
+   option = {
+	  name = EVTOPTC_deeper_events.0
+   }
+}

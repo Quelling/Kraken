@@ -1,0 +1,22 @@
+goodkraken = {
+   general_opinion = 5
+}
+verygoodkraken = {
+   general_opinion = 10
+}
+
+lawlessness = {
+   local_revolt_risk = 0.1
+   general_opinion = -10
+}
+
+hiredot = {
+   dothraki_rel_group_opinion = 5
+   icon = 1
+}
+wasonkrakenhunt = {
+   same_religion_opinion = 5
+   icon = 34
+   
+}
+

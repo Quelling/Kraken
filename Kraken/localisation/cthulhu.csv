@@ -1,0 +1,228 @@
+#Title
+d_Cthulhu;Cthulhu;;;;;;;;;;;;;x
+d_Cthulhu_adj;Cthulhu;;;;;;;;;;;;;x
+PIRATE_CTHULHU;Cthulhu;;;;;;;;;;;;;x
+PIRATE_CTHULHU;Cthulhu Adeptess;;;;;;;;;;;;;x
+PIRATE_CTHULHU_FOA;Cthulhu;;;;;;;;;;;;;x
+
+#Religion
+Cthulhu_rel;The Adept of Cthulhu;;;;;;;;;;;;;x
+Cthulhu_rel_DESC;They were not composed altogether of flesh and blood. They had shape but that shape was not made of matter. When the stars were right, They could plunge from world to world through the sky; but when the stars were wrong, They could not live. But although They no longer lived, They would never really die. They all lay in stone houses in Their great city of R'lyeh, preserved by the spells of mighty Cthulhu for a glorious resurrection when the stars and the earth might once more be ready for Them.;;;;;;;;;;;;;x #
+
+#Decisions_kraken
+huntkraken;Hunt The Kraken;;;;;;;;;;;;;x  
+huntkraken_desc;- Sir! We listened about big fish, which name is kraken. This mythical creature sinks our ships and steal plundering. Perhaps it is all fairy tales from traitors... Anyway, you must get to the truth and hang up kraken's head!;;;;;;;;;;;;;x
+krakenfeast;Start Kraken Feast;;;;;;;;;;;;;x
+krakenfeast_desc;You have killed legendary Kraken! Your crew has already told everyone about this, but it is time to arange a great feast about this;;;;;;;;;;;;;x
+general;Hire a dothrakian commander.;;;;;;;;;;;;;x
+general_desc;We heard about one great mercenary... For a small amount of money he will join us.;;;;;;;;;;;;;x
+
+#Event_kraken
+EVTNAME_hunt_events.1;Where is this salty Kraken?!;;;;;;;;;;;;;x
+EVTDESC_hunt_events.1;Having got aboard, you looked back and looked at your team. Hardly had you time to meet someone, how the boatswain approached you. \n "Captain, the team is ready, they are hungry for action, especially considering where you called them all." "Hunting kraken, yes?" These sea wolves are not afraid to climb the dragon's mouth, what can we talk about ?! " \n ... if you pay." \n - "Where is this herring ?!" \ nNow you need to select a direction. In the north and west should be calm, which can not be said about the east and south. In the south, according to rumors, there is a caravan with wine from the Summer Islands, in the east a new batch of "punitive punishers" - hired by Yi Ti. \n - "What's the course, Captain?".;;;;;;;;;;;;;x 
+EVTDESC_hunt_events.0;You have not found something interestering and decide return to [Root.Capital.GetName].r;;;;;;;;;;;;;x
+EVTOPTA_hunt_events.0;Raise the sails!.;;;;;;;;;;;;;x
+
+EVTOPTA_hunt_events.1;To the north! I like snow.;;;;;;;;;;;;;x
+EVTOPTB_hunt_events.1;To the south! Soon we'll get drunk like shrimp.;;;;;;;;;;;;;x 
+EVTOPTC_hunt_events.1;To the east! Kraken shall be at DragonStone.;;;;;;;;;;;;;x
+EVTOPTD_hunt_events.1;To the west! Bodies of Yi Ti will be an excellent bait.;;;;;;;;;;;;;x
+EVTDESC_north_events.1;After a month's journey, you finally arrived to north part of westeros - Skagos. \nIt's pretty cold here, but you anticipate the prey and do not pay too much attention to the temperature, which can not be said about the team. Although they called themselves "sea wolves," the cold did bother them. Preference, all the same, was a warm climate closer to the Summer Islands.\n Skagos is mountainous and forbidding with rough and treacherous currents around the isle. Sailing is hazardous, especially during the autumn storms when the cold can freeze ropes and sails. People live here a little and you dont see any other ships. \n Boatswain come to you and ask about further order.;;;;;;;;;;;;;x
+EVTOPTA_north_events.1;We are stay here. Sprawl nets!;;;;;;;;;;;;;x
+EVTOPTB_north_events.1;To the shore.;;;;;;;;;;;;;x
+TOOLTIP_north_events_1A_tooltip;\n§C40%§! - Travel will be done. \n §G30%§! - shark in net. \n §G25%§! - you found a second part of sword. \n §R10%§! - kraken found you...\n;;;;;;;;;;;;;x       
+TOOLTIP_north_events_20A_tooltip;\n§C30%§! - You will not found anything and return to ship. \n §K30%§! - shark in the water. \n §G20%§! - you found a part of strange map. \n §G20%§! - you found a part of sword.\n;;;;;;;;;;;;;x
+EVTOPTE_north_events.1;I'll kill him by my self!;;;;;;;;;;;;;x
+EVTOPTC_north_events.1;We're return. Raise the sails!;;;;;;;;;;;;;x
+EVTDESC_hunt_events.2;On this you decide to finish your journey and return in [Root.Capital.GetName]. Having given the necessary instructions to boatswain, you descended to your cabin. \n Nothing interesting happened after.;;;;;;;;;;;;;x 
+EVTOPTA_hunt_events.2;Sweet home.;;;;;;;;;;;;;x
+EVTDESC_hunt_events.3;our plans have changed and you return in [Root.Capital.GetName].;;;;;;;;;;;;;x
+EVTOPTA_hunt_events.3;Sweet home.;;;;;;;;;;;;;x
+EVTDESC_north_events.3;You spent a couple of weeks near the island. Your people scattered the nets, but out of this venture nothing was caught except the fish. At some point, it seemed to you that it would not work and it was time to return, as a huge shark fell into the net. With difficulty, your people caught it - from it will come out a great scarecrow.;;;;;;;;;;;;;x 
+EVTOPTA_north_events.3;You are catch a fatty shark.;;;;;;;;;;;;;x
+EVTDESC_north_events.4;Wonderful idea coming in your mind. You swim far away from island and go deep. Only there you understand, that this idea with swim in cool water was... not too much smart. Not enough that cold, more, right now fat shark look in your eyes and swim away.;;;;;;;;;;;;;x  
+EVTOPTA_north_events.4;Get out here!;;;;;;;;;;;;;x
+TOOLTIP_north_events_4A_tooltip;\n§R30%§! - shark eat you! \n§Y30%§! - you got wounded and escape. \n§Y20%§! - you get wound and loose leg but escape. \n§C10%§! - you are save in boat without any wounds. \n§P10%§! - what is... it?;;;;;;;;;;;;;x
+EVTDESC_north_events.5;Standing at the side you looked at the water. In the far off on the very edge of the view was the Skage Island. Suddenly, it seemed to you that something appeared at the bottom. Peering into the water you saw the purpose of your quest. This is the last thing you saw except for the deaths of your crew from the tentacles of Kraken.;;;;;;;;;;;;;x  
+EVTOPTA_north_events.5;Kraken eat you all!;;;;;;;;;;;;;x
+EVTDESC_north_events.6;In networks your people have found a broken sword and gave to you. It remains to find one more part of the blacksmith and to try to restore it. \nNOTE: when you collect two north's part of sword you can push separate decision for this event.;;;;;;;;;;;;;x
+EVTOPTA_north_events.6;It was good sword sadly that now broken..;;;;;;;;;;;;;x
+EVTDESC_north_events.7;Instead of freezing in cold water, you decided to walk along the beach. At some point, your foot in something buried. Bending down, you found a piece of paper that was strange to the touch. "Part of the map" - you realized, looking at the obscure signs, and went to the ship.;;;;;;;;;;;;;x
+EVTOPTA_north_events.7;I'll call it §BThe North Map.§! ;;;;;;;;;;;;;x
+EVTDESC_north_events.8;After emerging from the sea you managed to find part of an interesting sword. It remains to find one more part of the blacksmith and to try to restore it. \nNOTE: when you collect two north's part of sword you can push separate decision for this event. ;;;;;;;;;;;;;x
+EVTOPTA_north_events.8;Good, but broken sword. ;;;;;;;;;;;;;x
+EVTDESC_hunt_events.9;You jump in water and keep your crew with wonder on eyes. None of them really expected such an act, because the water is cold, and even if Kraken is really there, the chance to kill him alone is close to zero. \nHere, underwater, you don'y see many but you really decide kill him by your self;;;;;;;;;;;;;x
+EVTOPTA_hunt_events.9;Search a kraken.;;;;;;;;;;;;;x
+TOOLTIP_hunt_events.9A_tooltip; §P60%§! - you found a kraken. §G40%§! - kraken avoid meeting.;;;;;;;;;;;;;x
+EVTOPTB_hunt_events.9;Deeper!;;;;;;;;;;;;;x  
+TOOLTIP_hunt_events.9B_tooltip; §P90%§! - I'm never giveup! §R10%§! - you drowned;;;;;;;;;;;;;x 
+EVTDESC_north_events.10;You found him. Big tentacles right close to you. They are so long that they can pierce you and you will not even notice. We can only wonder how he grew up in this. Looks like he is sleeping now.\n The only chance to win is attack in his head. Swimming to him you take out sword quity as possible.;;;;;;;;;;;;;x
+EVTOPTA_north_events.10;Here is he!;;;;;;;;;;;;;
+TOOLTIP_north_events.10A_tooltip;\n§R50%§! - you died \n§Y30%§! - he talks with you. \n§G20%§! - kraken has been defeated.;;;;;;;;;;;;;x
+EVTOPTB_hunt_events.10;Quick as wind!;;;;;;;;;;;;;x
+TOOLTIP_hunt_events.10B_tooltip;\n§G80%§! - kraken has been defeated \n§R20%§! - kraken kill you.;;;;;;;;;;;;;x
+TOOLTIP_hunt_events.10C_tooltip;\n§G90%§! - kraken has been defeated \n§R10%§! - kraken kill you.;;;;;;;;;;;;;x
+EVTOPTC_hunt_events.10;He did not different than any enemy. One hit in head that's all.;;;;;;;;;;;;;x
+EVTDESC_north_events.11;You managed to sneak up unnoticed and stick a sword directly into the head. Immediately after that a deafening howl was heard in your head. \nThis blow was not enough, so you lead the sword deeper and deeper. It seemed, that the battle was not as few seconds, but whole minutes. Kraken tried to reach you, but he did not succeed. In the end you managed to win, but the price is quite high. For the rest of your life your body will remember what it is, to fight with the kraken in the native element.\n Back on the ship, your crew looked at the barely alive captain and the flashing body of the Kraken. \nOn arrival, you can arrange a holiday. "If I will survive" - ,you thought and fall a sleep.;;;;;;;;;;;;;
+EVTOPTA_north_events.11;Victory is mine!;;;;;;;;;;;;; 
+EVTDESC_north_events.12;While you were swimming you thought that someone was following you, but there were no fish. As soon as you stopped, you saw a strange creature with a human face in front of you, and behind it a shark. Looking into his eyes, you thought he was wondering who to kill first: you or a shark.;;;;;;;;;;;;;
+EVTOPTA_north_events.12;Not me...;;;;;;;;;;;;;
+TOOLTIP_north_events.12A_tooltip;\n§R60%§! - death. \n§G40%§! - shark's death?;;;;;;;;;;;;;
+EVTDESC_north_events.13;That creature pierced the body of the shark with its tail, like a red-hot knife in oil. Without wasting time, you began to float. After sailing further you looked back and saw that this creature is looking at you. His mind was splashing in his eyes, but you were not interested in him and it was gone.;;;;;;;;;;;;;
+EVTOPTA_north_events.13;Fish... with man's face?;;;;;;;;;;;;;
+EVTDESC_north_events.14;You barely took it into your hands as it turned into dust and immediately crumbled. On the way back to the ship you found a small bag of money. \nNOTE: you cannot carry many than one unique item;;;;;;;;;;;;;
+EVTOPTA_north_events.14;Well...;;;;;;;;;;;;;
+EVTDESC_north_events.15;You got wounded from shark and escape.;;;;;;;;;;;;;
+EVTOPTA_north_events.15;Why am i swim here alone?!;;;;;;;;;;;;;
+EVTDESC_north_events.16;You got wounded and lose a leg from shark but escape with life. ;;;;;;;;;;;;;
+EVTOPTA_north_events.16;So cold...;;;;;;;;;;;;;
+EVTDESC_north_events.17;As you seen shark you immediatly go away to your boat. Shark won't follow you and go in other side, feels more tasty meat.;;;;;;;;;;;;;
+EVTOPTA_north_events.17;No more!;;;;;;;;;;;;;
+EVTDESC_north_events.18;He opened eys. huge red eyes, they looked as if into the soul. \n§R- "Who... are... you?§"!\nThe words sounded right in my head. Fear came after them so strong that you did not think you swam upstairs, rowing with all your might. Once on deck you realized that you were blinded. ;;;;;;;;;;;;;
+EVTOPTA_north_events.18;Ship! Ship!;;;;;;;;;;;;;  
+EVTDESC_north_events.19;Dived deep, you plowed the water. There was no one. Suspiciously, but not even a single fish, as if all had swam away from something terrible. \n You emerged back to breathe in air and repeated the search attempt but also found no one. Having done so again and chilled to the bone, you decided to return home;;;;;;;;;;;;;
+EVTOPTA_north_events.19;So... cold...;;;;;;;;;;;;
+EVTDESC_north_events.20;You are on the lonely shore of Skagos. Go deep into the island do not want, and in general there is not much interesting. You went along the water and began to think about what you would do to dispel boredom.;;;;;;;;;;;;
+EVTOPTA_north_events.20;Too boring...;;;;;;;;;;;; 	  
+EVTDESC_north_events.21;You slowly swam straight to the head of the Kraken. His eyes were closed and barely moving, as if he were dreaming. With all possible care, the sword moved into your hand. Thoughts on what these huge tentacles can do with you gave you confidence in your actions, because there is no turning back. Suddenly, you felt a great pain, and looked down to see a tentacle protruding from the chest.;;;;;;;;;;;;;x
+EVTOPTA_north_events.21;*bulk* *bulk*;;;;;;;;;;;;;x
+EVTDESC_generals_events.0;The Dothraki are a race of nomadic horse-mounted warriors in Essos, the continent to the east of Westeros across the Narrow Sea. They inhabit the vast central plains of Essos, known as the Dothraki sea. Their bond with horses is such that Dothraki are said to be born, fight, and die in the saddle. ;;;;;;;;;;;;;x
+EVTDESC_hunt_events.22;Spent the week on this island, you could not find anything. Even people here seemed extinct. About kraken to find out, too, did not succeed - the locals if they live here, it is too far from the shore, or not on this side.;;;;;;;;;;;;;x
+EVTOPTA_hunt_events.22;I want warm bath...;;;;;;;;;;;;;x 
+EVTOPTA_generals_events.0;Let's see who is this mercenary;;;;;;;;;;;;;x
+
+EVTDESC_krakenfeast_events.0;After the victory over the Kraken, you decided to organize a feast. \nThose sailors that were on that day with you on the ship, had already ruffled the entire district about what had happened. \nThey saw with their own eyes a huge dead body that surfaced after your triumphal exit from the water, as well as many wounds on the winner's body. \nNaturally, such an incredible event could not quickly be forgotten in the hearts of sailors and began to acquire the most incredible details. Only after your departure the body of the Kraken vanished ... therefore, there is no concrete evidence of victory. If you do not immediately tell people everything, they can just forget about it, or not take it seriously.;;;;;;;;;;;;;x
+EVTOPTA_krakenfeast_events.0;My realm is enough for this feast.;;;;;;;;;;;;;x
+EVTOPTB_krakenfeast_events.0;All world must know about kraken's dead.;;;;;;;;;;;;;x
+EVTOPTC_krakenfeast_events.0;I'm change my mind.;;;;;;;;;;;;;x
+EVTDESC_krakenfeast_events.1;You decided not to send news around the world and celebrate the victory in a narrow circle. Only people known to you have gathered here. \nOnly one question: who is this man in a black hood? He standing apart from everyone and looking on you.;;;;;;;;;;;;;x
+EVTOPTA_krakenfeast_events.1;Who is he?;;;;;;;;;;;;;x
+EVTDESC_krakenfeast_events.3;You decided to have a grand celebration. A lot of people from all over the world gathered here. Some of them have yet to talk. Against the background, merry music plays, people congratulate you one by one, but not all believe that you really defeated Kraken. \n Only one question: who is this man in a black hood? He standing apart from everyone and looking on you.;;;;;;;;;;;;;x
+EVTOPTA_krakenfeast_events.3;Who is he?;;;;;;;;;;;;;x
+EVTDESC_krakenfeast_events.4;An unknown person came to you and bowed. The hood went back and you could see his face. Based on a deep scar on his eye and lack of eye, something sharp tried to take his life. But since he is here now, we can conclude that it is not so easy to kill him.\n In the features of his face you could find some kind of resemblance to your father, and indeed your family. Turning, you noticed that one of your courtiers even gasped, as if he recognized someone from the past. \nWith an insinuating voice he began to tell you a brief history of his life. According to him, he is your relative and all this time he was hiding from the unknown enemies of the family. Now he, at last, killed all and returned home. His history raises a lot of questions, but does not raise questions about his skill - such a person is exactly useful at court.;;;;;;;;;;;;;x
+EVTOPTA_krakenfeast_events.4;I'm belive you. Welcome to court.;;;;;;;;;;;;;x
+EVTOPTB_krakenfeast_events.4;Get out here lier!;;;;;;;;;;;;;x
+EVTOPTC_krakenfeast_events.4;What did you say? Cut his head.;;;;;;;;;;;;;x
+EVTOPTD_krakenfeast_events.4;Prison is a good place for man like you.;;;;;;;;;;;;;x
+EVTDESC_krakenfeast_events.5;A newly arrived family member decided to take power into his own hands. He planned the murder and now, being in the place of your sleep, he decided to do what he had planned.;;;;;;;;;;;;;x
+EVTOPTA_krakenfeast_events.5;Is it a dream?;;;;;;;;;;;;;x
+EVTOPTB_krakenfeast_events.5;I was waiting for you...;;;;;;;;;;;;;x
+EVTOPTC_krakenfeast_events.5;I already knew what you were planning. We can talk a little bit...;;;;;;;;;;;;;x
+EVTDESC_krakenfeast_events.6;Sir. Forgive me for insolence. I'm in debt ... a little more, and neither to me nor to my family, there will be nowhere to live. I ask you for the amount of 100 gold. I swear by honor, I will return it in two months.;;;;;;;;;;;;;x
+EVTOPTA_krakenfeast_events.6;No.;;;;;;;;;;;;;x
+EVTOPTB_krakenfeast_events.6;You have two monts.;;;;;;;;;;;;;x
+EVTOPTC_krakenfeast_events.6;How... did you... confiscate all!;;;;;;;;;;;;;x
+EVTOPTD_krakenfeast_events.6;No it is you give me all.;;;;;;;;;;;;;x
+EVTDESC_krakenfeast_events.7;Did you notice one of your sailors, I was with you in the campaign against the Kraken. Around him a couple of noble gentlemen gathered and enthusiastically listened. Apparently, he does not hesitate in the expressions colorfully describes the fight. However, he described himself almost "sword".;;;;;;;;;;;;;x
+EVTOPTA_krakenfeast_events.7;Do nothing.;;;;;;;;;;;;;x
+EVTOPTB_krakenfeast_events.7;Tell how it really was.;;;;;;;;;;;;;x
+EVTOPTC_krakenfeast_events.7;Take the situation in your hands and put everything in the best shape;;;;;;;;;;;;;x
+EVTOPTD_krakenfeast_events.7;Tell how it really was in details.;;;;;;;;;;;;;x
+EVTDESC_krakenfeast_events.8;The feast came to an end. The busiest guests have already left, but most are just going. It's time for you to make a speech, or to leave in silence.
+EVTOPTA_krakenfeast_events.8;The feast is end.;;;;;;;;;;;;;x
+EVTOPTB_krakenfeast_events.8;End the feast with great speech.;;;;;;;;;;;;;x
+EVTDESC_krakenfeast_events.9;"Sir, the slave-dealer from the Meereen has arrived, he brought with him... a gift.";;;;;;;;;;;;;x
+EVTOPTA_krakenfeast_events.9;We will listen to him.;;;;;;;;;;;;;x
+EVTOPTB_krakenfeast_events.9;Refused.;;;;;;;;;;;;;x   
+EVTDESC_krakenfeast_events.10;The arrived slave-dealer told that he was recently on the Summer Islands. There he "met" an interesting woman and now wants to offer you as a gift.;;;;;;;;;;;;;x
+EVTOPTA_krakenfeast_events.10;It's good present.;;;;;;;;;;;;;x
+EVTOPTB_krakenfeast_events.10;Never. I don't need slave.;;;;;;;;;;;;;x
+EVTOPTC_krakenfeast_events.10;A nice addition to my collection.;;;;;;;;;;;;;x
+EVTOPTD_krakenfeast_events.10;Execute him and free the slave.;;;;;;;;;;;;;x   
+EVTDESC_krakenfeast_events.11;Lady wave;;;;;;;;;;;;;x
+EVTOPTA_krakenfeast_events.11;Excellent.;;;;;;;;;;;;;x
+EVTOPTB_krakenfeast_events.11;I can't recieve that gold.;;;;;;;;;;;;;x
+EVTDESC_krakenfeast_events.12;He dead;;;;;;;;;;;;;x
+EVTOPTA_krakenfeast_events.12;And who will repay the debt?;;;;;;;;;;;;;x
+EVTOPTB_krakenfeast_events.12;Anyway we know where is he keep his treasure.;;;;;;;;;;;;;x
+EVTOPTC_krakenfeast_events.12;Sell his house and everything inside.;;;;;;;;;;;;;x
+EVTOPTD_krakenfeast_events.12;Sell his whole family into slavery and don't forget about house.;;;;;;;;;;;;;x
+EVTDESC_krakenfeast_events.13;blacksmith;;;;;;;;;;;;;x
+EVTOPTA_krakenfeast_events.13;I'll remember this.;;;;;;;;;;;;;x
+EVTDESC_krakenfeast_events.14;Lady wave;;;;;;;;;;;;;x
+EVTOPTA_krakenfeast_events.14;We'll meet again.;;;;;;;;;;;;;x
+
+EVTDESC_blacksmith_events.0; ;;;;;;;;;;;;;x
+EVTOPTA_blacksmith_events.0; ;;;;;;;;;;;;;x
+EVTOPTB_blacksmith_events.0; ;;;;;;;;;;;;;x
+EVTDESC_blacksmith_events.1; ;;;;;;;;;;;;;x
+EVTOPTA_blacksmith_events.1; ;;;;;;;;;;;;;x
+EVTOPTB_blacksmith_events.1; ;;;;;;;;;;;;;x
+EVTOPTC_blacksmith_events.1; ;;;;;;;;;;;;;x
+EVTOPTD_blacksmith_events.1; ;;;;;;;;;;;;;x
+EVTDESC_blacksmith_events.2; ;;;;;;;;;;;;;x
+EVTOPTA_blacksmith_events.2; ;;;;;;;;;;;;;x
+EVTDESC_blacksmith_events.3; ;;;;;;;;;;;;;x
+EVTOPTA_blacksmith_events.3; ;;;;;;;;;;;;;x
+EVTDESC_blacksmith_events.4; ;;;;;;;;;;;;;x
+EVTOPTA_blacksmith_events.4; ;;;;;;;;;;;;;x
+EVTOPTB_blacksmith_events.4; ;;;;;;;;;;;;;x
+EVTOPTC_blacksmith_events.4; ;;;;;;;;;;;;;x
+EVTDESC_blacksmith_events.5; ;;;;;;;;;;;;;x
+EVTOPTA_blacksmith_events.5; ;;;;;;;;;;;;;x
+EVTDESC_blacksmith_events.6; ;;;;;;;;;;;;;x
+EVTOPTA_blacksmith_events.6; ;;;;;;;;;;;;;x
+EVTDESC_blacksmith_events.7; ;;;;;;;;;;;;;x
+EVTOPTA_blacksmith_events.7; ;;;;;;;;;;;;;x
+EVTDESC_blacksmith_events.8; ;;;;;;;;;;;;;x
+EVTOPTA_blacksmith_events.8; ;;;;;;;;;;;;;x
+EVTDESC_blacksmith_events.9; ;;;;;;;;;;;;;x
+EVTOPTA_blacksmith_events.9; ;;;;;;;;;;;;;x
+EVTOPTB_blacksmith_events.9; ;;;;;;;;;;;;;x
+EVTOPTC_blacksmith_events.9; ;;;;;;;;;;;;;x
+EVTDESC_blacksmith_events.10; ;;;;;;;;;;;;;x
+EVTOPTA_blacksmith_events.10; ;;;;;;;;;;;;;x
+EVTOPTB_blacksmith_events.10; ;;;;;;;;;;;;;x
+
+EVTDESC_ladywave_events.0; ;;;;;;;;;;;;;x
+EVTOPTA_ladywave_events.0; ;;;;;;;;;;;;;x
+EVTOPTB_ladywave_events.0; ;;;;;;;;;;;;;x
+EVTDESC_ladywave_events.1; ;;;;;;;;;;;;;x
+EVTOPTA_ladywave_events.1; ;;;;;;;;;;;;;x
+EVTOPTB_ladywave_events.1; ;;;;;;;;;;;;;x
+EVTOPTC_ladywave_events.1; ;;;;;;;;;;;;;x
+EVTOPTD_ladywave_events.1; ;;;;;;;;;;;;;x
+EVTDESC_ladywave_events.2; ;;;;;;;;;;;;;x
+EVTOPTA_ladywave_events.2; ;;;;;;;;;;;;;x
+EVTDESC_ladywave_events.3; ;;;;;;;;;;;;;x
+EVTOPTA_ladywave_events.3; ;;;;;;;;;;;;;x
+EVTDESC_ladywave_events.4; ;;;;;;;;;;;;;x
+EVTOPTA_ladywave_events.4; ;;;;;;;;;;;;;x
+EVTDESC_ladywave_events.5; ;;;;;;;;;;;;;x
+EVTOPTA_ladywave_events.5; ;;;;;;;;;;;;;x
+EVTOPTB_ladywave_events.5; ;;;;;;;;;;;;;x
+EVTDESC_ladywave_events.6; ;;;;;;;;;;;;;x
+EVTOPTA_ladywave_events.6; ;;;;;;;;;;;;;x
+EVTDESC_ladywave_events.7; ;;;;;;;;;;;;;x
+EVTOPTA_ladywave_events.7; ;;;;;;;;;;;;;x
+EVTDESC_ladywave_events.8; ;;;;;;;;;;;;;x
+EVTOPTA_ladywave_events.8; ;;;;;;;;;;;;;x
+
+
+EVTDESC_blacksmith_events.0; ;;;;;;;;;;;;;x
+
+TOOLTIP_test; §Re§! .;;;;;;;;;;;;;x
+
+#Modifiers
+wasonkrakenhunt;Was on hunt to the legendary kraken;;;;;;;;;;;;;x
+opinion_hire_me;Was hired.;;;;;;;;;;;;;x 
+hiredot;Dothrakian commander.;;;;;;;;;;;;;x
+hiredot_desc;You have hired the dothrakian commander.;;;;;;;;;;;;;x
+
+#Traits
+krakenseeker;Kraken's defeater;;;;;;;;;;;;;x
+krakenseeker_dest;This character killed a legendary kraken.;;;;;;;;;;;;;x 
+lookingforkraken;Kraken Journey.;;;;;;;;;;;;;x
+lookingforkraken_desc;Where are you, kraken?!;;;;;;;;;;;;;x
+
+#Items
+sword_first_part;First part of sword of the Deep.;;;;;;;;;;;;;x
+sword_first_part_desc;I am found it in north side of map and must collect last part in other side of world. When all parts are done i am must found a blacksmith for merge it. \n§NOTE: you can found him through decision.§!;;;;;;;;;;;;;x
+sword_second_part;Second part of sword of the Deep.;;;;;;;;;;;;;x
+sword_second_part_desc;I am found it in south side of map and must collect last part in other side of world. When all parts are done i am must found a blacksmith for merge it. \n§NOTE: you can found him through decision.§!.;;;;;;;;;;;;;x
+north_map_desc;I am found it in north side of map and must collect other parts of map in other sides of world.;;;;;;;;;;;;;x
+north_map;§BThe north part of Map.§!;;;;;;;;;;;x
+deeper;Sword of Deep;;;;;;;;;;;;;x
+deeper_desc;Good valyrian sword which founded underwater.;;;;;;;;;;;;;x
+krakendead;Cursed Sword;;;;;;;;;;;;;x
+krakendead_desc;Strange person gave you this sword.;;;;;;;;;;;;;x

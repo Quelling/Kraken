@@ -1,0 +1,26 @@
+spriteTypes = {
+   spriteType= {
+	  name = "GFX_huntkraken"
+	  texturefile = "gfx\\interface\\huntkraken24.dds"
+   }
+
+   spriteType= {
+	  name = "GFX_trait_krakenseeker"
+	  texturefile = "gfx\\traits\\krakenseeker.dds"
+	  noOfFrames = 1
+	  norefcount = yes
+	  effectFile = "gfx/FX/buttonstate.lua"
+	  
+   }
+      spriteType= {
+	  name = "GFX_trait_lookingforkraken"
+	  texturefile = "gfx\\traits\\lookingforkraken.dds"
+	  noOfFrames = 1
+	  norefcount = yes
+	  effectFile = "gfx/FX/buttonstate.lua"
+   }
+
+
+}
+
+

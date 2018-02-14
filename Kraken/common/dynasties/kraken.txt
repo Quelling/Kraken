@@ -1,0 +1,6 @@
+101999 = {
+	name="Seekers"
+	culture = brindleman
+	used_for_random = no
+	can_appear = no
+}

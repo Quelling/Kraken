@@ -1,0 +1,168 @@
+pirate_group = { #red, yellow, orange
+	has_coa_on_barony_only = yes
+	graphical_culture = norsegfx
+
+	playable = yes
+
+	ai_fabricate_claims = no
+
+	color = { 0.5 0.5 0.5 } #grey
+	Cthulhu_rel = {
+		graphical_culture = norsegfx
+
+		icon = 20
+		color = { 0.5 0.5 0.5 } #grey
+
+		high_god_name = GOD_THE_GODS
+
+		god_names = {
+			GOD_THE_CTHULHU GOD_THE_WATER GOD_THE_UNDERGROUND GOD_THE_SLEEPING
+		}
+		evil_god_names = {
+			GOD_THE_DEMONS GOD_THE_DARKNESS
+		}
+		max_consorts = 7
+
+		allow_looting = yes
+		allow_rivermovement = yes
+		seafarer = yes
+		priests_can_marry = yes
+
+		defensive_attrition = yes
+		peace_prestige_loss = yes
+		raised_vassal_opinion_loss = no
+		independence_war_score_bonus = 30
+		aggression = 4.0
+		crusade_name = "THE_GREAT_AWAKENING"
+		scripture_name = THE_SOLDIER
+		priest_title = PRIEST
+
+#		intermarry = valyrian_rel
+#		intermarry = corsair_group
+
+		dynamic_cult = no
+		secret_religion = no
+	}
+
+	pirate = {
+		graphical_culture = norsegfx
+
+		icon = 20
+		color = { 0.5 0.5 0.5 } #grey
+
+		high_god_name = GOD_THE_GODS
+
+		god_names = {
+			GOD_THE_GODS GOD_BAKKALON GOD_MERLIN_KING GOD_MOONPALE_MAIDEN
+		}
+		evil_god_names = {
+			GOD_THE_DEMONS GOD_DARK_SPIRITS
+		}
+		max_consorts = 7
+
+		allow_looting = yes
+		allow_rivermovement = yes
+		seafarer = yes
+
+		defensive_attrition = yes
+		peace_prestige_loss = yes
+		raised_vassal_opinion_loss = no
+		independence_war_score_bonus = 30
+		aggression = 4.0
+		crusade_name = "HOLY_WAR"
+		scripture_name = THE_SOLDIER
+		priest_title = PRIEST
+
+		intermarry = valyrian_rel
+		intermarry = corsair_group
+
+		dynamic_cult = no
+		secret_religion = no
+	}
+
+	lady_of_the_waves = {
+		graphical_culture = norsegfx
+
+		icon = 37
+		color = { 0.75 0.3 0 }
+
+		high_god_name = GOD_LADY_OF_THE_WAVES
+
+		god_names = {
+			GOD_LADY_OF_THE_WAVES GOD_LORD_OF_THE_SKIES GOD_THE_GODS GOD_MERLIN_KING GOD_MOONPALE_MAIDEN
+		}
+		evil_god_names = {
+			GOD_THE_OTHERS
+		}
+		max_consorts = 7
+
+		allow_looting = yes
+		allow_rivermovement = yes
+		seafarer = yes
+
+		defensive_attrition = yes
+		peace_prestige_loss = yes
+		raised_vassal_opinion_loss = no
+		independence_war_score_bonus = 30
+		aggression = 4.0
+		crusade_name = "HOLY_WAR"
+		scripture_name = THE_SOLDIER
+		priest_title = PRIEST
+
+		intermarry = valyrian_rel
+		intermarry = corsair_group
+
+		religious_clothing_head = 4
+		religious_clothing_priest = 4
+	}
+}
+
+corsair_group = { #red, yellow, orange
+	has_coa_on_barony_only = yes
+	graphical_culture = norsegfx
+
+	playable = yes
+
+	ai_fabricate_claims = no
+
+	color = { 0.5 0.5 0.5 } #grey
+
+	corsair = {
+		graphical_culture = norsegfx
+
+		icon = 29
+		color = { 0.5 0.5 0.5 } #grey
+
+		high_god_name = GOD_THE_GODS
+
+		god_names = {
+			GOD_THE_GODS GOD_BAKKALON GOD_MERLIN_KING GOD_MOONPALE_MAIDEN
+		}
+		evil_god_names = {
+			GOD_THE_DEMONS GOD_DARK_SPIRITS
+		}
+		max_consorts = 7
+
+		allow_looting = yes
+		allow_rivermovement = yes
+		seafarer = yes
+
+		defensive_attrition = yes
+		peace_prestige_loss = yes
+		raised_vassal_opinion_loss = no
+		independence_war_score_bonus = 30
+		aggression = 4.0
+		crusade_name = "HOLY_WAR"
+		scripture_name = THE_SOLDIER
+		priest_title = PRIEST
+
+		religious_clothing_head = 3
+		religious_clothing_priest = 3
+
+		intermarry = valyrian_rel
+		intermarry = pirate_group
+
+		dynamic_cult = no
+		secret_religion = no
+	}
+}
